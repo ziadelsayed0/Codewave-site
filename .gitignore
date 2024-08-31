@@ -1,0 +1,65 @@
+# Python (Django) ignores
+*.py[cod]
+__pycache__/
+*.so
+*.egg
+*.egg-info/
+*.swp
+*.bak
+.DS_Store
+.Python
+.env
+venv/
+ENV/
+env/
+*.sqlite3
+db.sqlite3
+*.log
+
+# Django specific ignores
+staticfiles/
+media/
+*.pot
+*.mo
+*.po
+celerybeat-schedule
+celerybeat.pid
+
+# Node.js (React) ignores
+node_modules/
+npm-debug.log
+yarn-error.log
+.pnp/
+.pnp.js
+.eslintcache
+
+# Build directory (React)
+build/
+dist/
+
+# Log files
+*.log
+logs/
+*.log.*
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# MacOS specific ignores
+.DS_Store
+
+# Windows specific ignores
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Visual Studio Code ignores
+.vscode/
+
+# IDE specific ignores (e.g., PyCharm, IntelliJ)
+.idea/
+*.iml
+
+# VS Code specific settings
+.vscode/
+

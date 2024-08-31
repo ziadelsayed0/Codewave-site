@@ -1,0 +1,25 @@
+GET http://localhost:8000/api/note/ HTTP/1.1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI0MTU2NzExLCJpYXQiOjE3MjQxNTQ4MzMsImp0aSI6IjVkNmFkZmJmMTAzNzRlNDM5YzdkZGFiYTlmNmRmZjViIiwidXNlcl9pZCI6MjB9.KS4LuS9v4WshA8-al089c6hWLCaJWJ9ikUoAVZPTzjI
+Content-Type: application/json
+
+# {
+#     "username":"gee",
+#     "password":"1231"
+# }
+
+# {
+#     "refresh":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcyNDI0MTIzMywiaWF0IjoxNzI0MTU0ODMzLCJqdGkiOiI3ZDVlNzA1ODFmMWM0NzVhYWQxZjYyODZmOWNiZDY1MCIsInVzZXJfaWQiOjIwfQ.0iiKajiJNAdSmncXb54xn6YHFFQG8OfSgDfbecLUox0"
+# }
+
+# {
+#     "title" : "sjskk", 
+#     "content": "acsmckslacksajc;lsac"
+# }
+
+
+
+
+# {
+#   "refresh": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoicmVmcmVzaCIsImV4cCI6MTcyNDI0MTIzMywiaWF0IjoxNzI0MTU0ODMzLCJqdGkiOiI3ZDVlNzA1ODFmMWM0NzVhYWQxZjYyODZmOWNiZDY1MCIsInVzZXJfaWQiOjIwfQ.0iiKajiJNAdSmncXb54xn6YHFFQG8OfSgDfbecLUox0",
+#   "access": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNzI0MTU2NzExLCJpYXQiOjE3MjQxNTQ4MzMsImp0aSI6IjVkNmFkZmJmMTAzNzRlNDM5YzdkZGFiYTlmNmRmZjViIiwidXNlcl9pZCI6MjB9.KS4LuS9v4WshA8-al089c6hWLCaJWJ9ikUoAVZPTzjI"
+# }
