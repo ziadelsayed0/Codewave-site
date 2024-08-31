@@ -1,5 +1,5 @@
-import {Navigete} from "react-router-dom"
-import api from "../api"
+import {Navigate} from "react-router-dom"
+import api from "../api.js"
 import {jwtDecode} from "jwt-decode"
 import { ACCESS_TOKEN,REFESH_TOKEN } from "../constants"
 import { useState, useEffect } from "react"
@@ -55,7 +55,7 @@ function ProtectedRoute({childern}){
         return <div>Lodding...</div>
     }
 
-    return isAuthorized ? childern : <Navigete to="/login"/>
+    return isAuthorized ? childern : <Navigate to="/login"/>
 }
 
 export default ProtectedRoute
