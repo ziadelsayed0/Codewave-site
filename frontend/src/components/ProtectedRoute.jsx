@@ -37,6 +37,7 @@ function ProtectedRoute({childern}){
         const token = localStorage.getItem(ACCESS_TOKEN);
         if(!token){
             setIsAuthorized(flase)
+            alert(token)
             return
         }
         const decoded = jwtDecode(token)
