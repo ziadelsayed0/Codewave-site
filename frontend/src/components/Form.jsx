@@ -19,7 +19,6 @@ function Form({ route, method }) {
         try {
             // console.log("Submitting form data:", { username: userName, password });
     
-            // Corrected data payload to match server expectations
             const res = await api.post(route, { username: userName, password });
     
             if (method === "login") {
@@ -46,6 +45,7 @@ function Form({ route, method }) {
     const deverseName = method === "login" ? "Sign Up" : "Sign In";
     const topSentence= method ==="login" ? "Sing in with your account" : "Sing up with new account";
     const forward = method === "login" ? "/register" : "/login";
+    const backimg = method === "login"? './src/images/laptop3.jpg' :'./src/images/laptop2.jpg';
 
     return (
         <div className="flex flex-col lg:flex-row h-screen">
@@ -118,7 +118,7 @@ function Form({ route, method }) {
             {/* Right Side - Background Image */}
             <div
                 className="w-full lg:w-1/2 h-64 lg:h-full bg-cover bg-center"
-                style={{ backgroundImage: `url('./src/images/laptop3.jpg')` }}
+                style={{ backgroundImage: `url(${backimg})` }}
             ></div>
         </div>
     );
