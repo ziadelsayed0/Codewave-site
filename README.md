@@ -16,7 +16,7 @@
   <li>JWT-Decode</li>
 </ul>
 
-## Setup Backend
+## Backend Setup 
 ```
 pip install -r requirements.txt
 ```
@@ -27,7 +27,7 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-## Setup Frontend
+## Frontend Setup 
 ```
 npm install
 ```
