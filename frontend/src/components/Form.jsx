@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { ACCESS_TOKEN,REFRESH_TOKEN } from '../constants';
 import { faGoogle, faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import api from '../api'; 
+
+
 function Form({ route, method }) {
     const [userName, setUserName] = useState("");
     const [password, setPassword] = useState("");
     const [loading, setLoading] = useState(false);
     const navigate = useNavigate();
-    const ACCESS_TOKEN = 'access_token';
-    const REFRESH_TOKEN = 'refresh_token';
 
     const handleSubmit = async (e) => {
         setLoading(true);
