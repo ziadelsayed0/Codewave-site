@@ -39,4 +39,19 @@ npm run dev
 ```
 
 <hr>
-<img src="#">
+
+#### Login Page
+
+<img src="signin.png">
+
+<hr>
+
+#### Home
+
+<img src="home.png">
+
+<hr>
+
+#### Sign Up Page
+
+<img src="signup.png">
