@@ -5,7 +5,7 @@
 ### Backend
 <ul>
   <li>Django</li>
-  <li>JWT</li>
+  <li>JWT-Authentication</li>
   <li>SQLite</li>
 </ul>
 
