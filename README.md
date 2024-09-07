@@ -5,8 +5,8 @@
 ### Backend
 <ul>
   <li>Django</li>
-  <li>JWT</li>
   <li>SQLite</li>
+  <li>JWT-Authentication</li>
 </ul>
 
 ### Frontend
@@ -16,7 +16,7 @@
   <li>JWT-Decode</li>
 </ul>
 
-## Setup Backend
+## Backend Setup 
 ```
 pip install -r requirements.txt
 ```
@@ -27,7 +27,7 @@ python manage.py migrate
 python manage.py runserver
 ```
 
-## Setup Frontend
+## Frontend Setup 
 ```
 npm install
 ```
@@ -39,4 +39,19 @@ npm run dev
 ```
 
 <hr>
-<img src="#">
+
+#### Login Page
+
+<img src="signin.png">
+
+<hr>
+
+#### Home
+
+<img src="home.png">
+
+<hr>
+
+#### Sign Up Page
+
+<img src="signup.png">

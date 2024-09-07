@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { ACCESS_TOKEN,REFRESH_TOKEN } from '../constants';
 import { faGoogle, faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons';
 import api from '../api'; 
+import LoadingIndicator from "./LoadingIndicatoer";
 
 
 function Form({ route, method }) {
@@ -86,6 +87,8 @@ function Form({ route, method }) {
                             placeholder="Password"
                         />
                     </div>
+                    <div className="bg-gray-900">{loading && <LoadingIndicator />}</div>
+                    
                     <button
                         type="submit"
                         className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mb-4"
