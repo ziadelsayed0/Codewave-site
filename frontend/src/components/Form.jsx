@@ -87,7 +87,7 @@ function Form({ route, method }) {
                             placeholder="Password"
                         />
                     </div>
-                    <div className="bg-gray-900">{loading && <LoadingIndicator />}</div>
+                    {loading && <LoadingIndicator />}
                     
                     <button
                         type="submit"
