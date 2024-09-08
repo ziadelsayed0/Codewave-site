@@ -46,7 +46,7 @@ function Form({ route, method }) {
     const deverseName = method === "login" ? "Sign Up" : "Sign In";
     const topSentence= method ==="login" ? "Sing in with your account" : "Sing up with new account";
     const forward = method === "login" ? "/register" : "/login";
-    const backimg = method === "login"? './src/images/laptop3.jpg' :'./src/images/laptop2.jpg';
+    const backimg = method === "login"? '/images/laptop3.jpg' :'/images/laptop2.jpg';
 
     return (
         <div className="flex flex-col lg:flex-row h-screen">
@@ -56,7 +56,7 @@ function Form({ route, method }) {
                 <div className="mb-6">
                     {/* Replace with your logo or icon */}
                     <a href="/login" className="flex justify-center">
-                        <img src="./src/images/codewave1.png" alt="Logo" className="w-16 h-16 rounded-full" />
+                        <img src="/images/codewave1.png" alt="Logo" className="w-16 h-16 rounded-full" />
                         codewave
                     </a>
                 </div>
