@@ -5,6 +5,7 @@ import Register from "./pages/Register"
 import Login from "./pages/Login"
 import NotFound from "./pages/NotFound"
 import ProtectedRoute from "./components/ProtectedRoute"
+import Landing from "./pages/Landing"
 import './App.css';
 
 function Logout(){
@@ -21,7 +22,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" 
+        <Route path="/home" 
         element = {
         <ProtectedRoute>
           <Home/>
@@ -29,6 +30,7 @@ function App() {
 
         <Route path="/login" element= {<Login/>}/>
         <Route path="/logout" element= {<Logout/>}/>
+        <Route path="/" element= {<Landing/>}/>
         <Route path="/register" element={<RegisterAndLogout/>}/>
         <Route path="*" element={<NotFound/>}/>
       </Routes>

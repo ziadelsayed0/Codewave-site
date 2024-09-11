@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { ACCESS_TOKEN,REFRESH_TOKEN } from '../constants';
+import { ACCESS_TOKEN, REFRESH_TOKEN } from '../constants';
 import { faGoogle, faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons';
-import api from '../api'; 
+import api from '../api';
 import LoadingIndicator from "./LoadingIndicatoer";
 
 
@@ -16,12 +16,12 @@ function Form({ route, method }) {
     const handleSubmit = async (e) => {
         setLoading(true);
         e.preventDefault();
-    
+
         try {
             // console.log("Submitting form data:", { username: userName, password });
-    
+
             const res = await api.post(route, { username: userName, password });
-    
+
             if (method === "login") {
                 localStorage.setItem(ACCESS_TOKEN, res.data.access);
                 localStorage.setItem(REFRESH_TOKEN, res.data.refresh);
@@ -31,7 +31,7 @@ function Form({ route, method }) {
             }
         } catch (error) {
             console.error("Error Response:", error.response);
-    
+
             if (error.response && error.response.data) {
                 alert(`Error: ${error.response.data.message || 'Bad request'}`);
             } else {
@@ -44,9 +44,9 @@ function Form({ route, method }) {
 
     const name = method === "login" ? "Sign In" : "Sign Up";
     const deverseName = method === "login" ? "Sign Up" : "Sign In";
-    const topSentence= method ==="login" ? "Sing in with your account" : "Sing up with new account";
+    const topSentence = method === "login" ? "Sing in with your account" : "Sing up with new account";
     const forward = method === "login" ? "/register" : "/login";
-    const backimg = method === "login"? '/images/laptop3.jpg' :'/images/laptop2.jpg';
+    const backimg = method === "login" ? '/images/laptop3.jpg' : '/images/laptop2.jpg';
 
     return (
         <div className="flex flex-col lg:flex-row h-screen">
@@ -88,7 +88,7 @@ function Form({ route, method }) {
                         />
                     </div>
                     {loading && <LoadingIndicator />}
-                    
+
                     <button
                         type="submit"
                         className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mb-4"
