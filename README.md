@@ -40,7 +40,7 @@ npm run dev
 
 <hr>
 
-#### Login Page
+#### Log-in Page
 
 <img src="signin.png">
 
