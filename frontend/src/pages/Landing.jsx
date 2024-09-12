@@ -1,5 +1,6 @@
 
 import React from "react";
+import Login from "./Login";
 function Landing(){
     return(
     <div>
@@ -9,6 +10,7 @@ function Landing(){
             <div class="container mx-auto px-4">
                 <div class="relative flex items-center justify-between">
                 <a class="inline-block" href="#">
+                <p class="text-white">codewave</p>
                     <img class="h-10 rounded-full" src="../images/codewave1.png" alt=""/>
                 </a>
                 <div class="flex items-center justify-end">
