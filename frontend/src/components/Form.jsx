@@ -56,8 +56,8 @@ function Form({ route, method }) {
                 <div className="mb-6">
                     {/* Replace with your logo or icon */}
                     <a href="/login" className="flex justify-center">
-                        <img src="/images/codewave1.png" alt="Logo" className="w-16 h-16 rounded-full" />
-                        codewave
+                        <img src="/images/3.png" alt="Logo" className="w-32
+                        rounded" />
                     </a>
                 </div>
 
@@ -91,7 +91,7 @@ function Form({ route, method }) {
 
                     <button
                         type="submit"
-                        className="w-full bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mb-4"
+                        className="w-full bg-orange-500 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline mb-4"
                         disabled={loading} // Disable button when loading
                     >
                         {name}
@@ -114,7 +114,7 @@ function Form({ route, method }) {
 
                 {/* Sign-In Link */}
                 <p className="text-gray-400">
-                    Don't have an account? <a href={forward} className="text-indigo-500 hover:underline">{deverseName}</a>
+                    Don't have an account? <a href={forward} className="text-orange-500 hover:underline">{deverseName}</a>
                 </p>
             </div>
 

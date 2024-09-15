@@ -1,82 +1,120 @@
+import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 
-import React from "react";
-function Landing(){
-    return(
+function LandingPage() {
+  const [mobileNavOpen, setMobileNavOpen] = useState(false);
+
+  return (
     <div>
-        {/*the top section*/}
-        <section class="relative bg-body overflow-hidden bg-black">
-            <nav class="relative z-10 py-7">
-            <div class="container mx-auto px-4">
-                <div class="relative flex items-center justify-between">
-                <a class="inline-block" href="#">
-                    <img class="h-10 rounded-full" src="../images/codewave1.png" alt=""/>
-                </a>
-                <div class="flex items-center justify-end">
-                    <div class="hidden lg:block mr-10"><a class="inline-flex py-2 px-4 mr-4 items-center justify-center text-sm font-medium uppercase text-white hover:text-violet-500" href="#">SIGN IN</a><a class="inline-flex h-11 py-2 px-4 items-center justify-center text-sm font-medium uppercase text-black hover:text-white bg-violet-500 hover:bg-violet-600 transition duration-200 rounded-full" href="#">SIGN UP</a></div>
-                    <button x-on:click="mobileNavOpen = !mobileNavOpen" class="text-white hover:text-violet-500">
-                    <svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M3 16H29" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                        <path d="M3 8H29" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                        <path d="M20 24L29 24" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
-                    </button>
+      {/* The top section */}
+      <section className="relative bg-body overflow-hidden bg-black">
+        <nav className="relative z-10 py-7">
+          <div className="container mx-auto px-4">
+            <div className="relative flex items-center justify-between">
+              <Link className="inline-block" to="/">
+                <img className="w-48 rounded-full" src="../images/3.png" alt="" />
+              </Link>
+              <div className="flex items-center justify-end">
+                <div className="hidden lg:block mr-10">
+                  <Link className="inline-flex py-2 px-4 mr-4 items-center justify-center text-sm font-medium uppercase text-white hover:text-orange-500" to="/login">
+                    SIGN IN
+                  </Link>
+                  <Link className="inline-flex h-11 py-2 px-4 items-center justify-center text-sm font-medium uppercase text-black hover:text-white bg-orange-500 hover:bg-orange-600 transition duration-200 rounded-full" to="/register">
+                    SIGN UP
+                  </Link>
                 </div>
-                </div>
-            </div>
-            </nav>
-            <div class="relative pt-24 lg:pt-44 pb-40 lg:pb-72">
-            <div class="relative z-10 container mx-auto px-4">
-                <div class="flex flex-wrap -mx-4 items-center">
-                <div class="w-full lg:w-1/2 xl:w-3/5 px-4 mb-32 lg:mb-0">
-                    <div class="max-w-md mx-auto lg:max-w-none">
-                    <h1 class="font-heading text-4xl sm:text-6xl md:text-7xl xl:text-8xl text-white font-semibold leading-none mb-8">INTRODUCING CASPER AI</h1>
-                    <p class="text-2xl text-gray-400 mb-8">
-                        <span class="block">Welcome to ChatBotX -</span>
-                        <span class="block">Your Intelligent AI Chat Assistant!</span>
-                    </p>
-                    <a class="group inline-flex h-14 px-7 items-center justify-center text-base font-medium text-black hover:text-white bg-violet-500 hover:bg-violet-600 transition duration-200 rounded-full" href="#">
-                        <span class="mr-2">TRY IT FOR FREE</span>
-                        <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        </svg>
-                    </a>
-                    </div>
-                </div>
-                <div class="w-full lg:w-1/2 xl:w-2/5 px-4">
-                    <div class="xl:inline-block relative">
-                    <img class="absolute top-0 right-0 -mt-8 mr-12 animate-spinStar" src="casper-assets/headers/blink-sm.png" alt=""/>
-                    <img class="absolute bottom-0 left-0 lg:-ml-24 xl:-ml-40 animate-spinStar" src="casper-assets/headers/blink-md.png" alt=""/>
-                    <img class="block px-10 md:px-0 mx-auto lg:mr-0" src="../images/robot.png" alt=""/>
-                    </div>
-                </div>
-                </div>
-            </div>
-            </div>
-            <div class="hidden fixed top-0 left-0 bottom-0 w-5/6 max-w-md z-50">
-            <div x-on:click="mobileNavOpen = !mobileNavOpen" class="fixed inset-0 bg-violet-900 opacity-20"></div>
-            <nav class="relative flex flex-col py-7 px-10 w-full h-full bg-white overflow-y-auto">
-                <div class="flex mb-auto items-center">
-                <a class="inline-block mr-auto" href="#">
-                    <img class="h-10" src="casper-assets/logos/casper-logo.svg" alt=""/>
-                </a>
-                <button x-on:click="mobileNavOpen = !mobileNavOpen">
-                    <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M6 18L18 6M6 6L18 18" stroke="#111827" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
-                    </svg>
+                <button onClick={() => setMobileNavOpen(!mobileNavOpen)} className="text-white hover:text-orange-500">
+                  <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M3 16H29" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
+                    <path d="M3 8H29" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
+                    <path d="M20 24L29 24" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
+                  </svg>
                 </button>
-                </div>
-                <div class="py-12 mb-auto">
-                <ul class="flex-col">
-                    <li class="mb-6"><a class="inline-block text-base text-black font-medium uppercase" href="#">FEATURED</a></li>
-                    <li class="mb-6"><a class="inline-block text-base text-black font-medium uppercase" href="#">SOLUTIONS</a></li>
-                    <li class="mb-6"><a class="inline-block text-base text-black font-medium uppercase" href="#">PRODUCTS</a></li>
-                    <li><a class="inline-block text-base text-black font-medium uppercase" href="#">ARTICLES</a></li>
-                </ul>
-                </div>
-                <div><a class="flex py-2 px-4 mb-4 items-center justify-center text-sm font-medium uppercase text-violet-900 hover:text-violet-500" href="">SIGN IN</a><a class="flex h-11 py-2 px-4 items-center justify-center text-sm font-medium uppercase text-black hover:text-white bg-violet-500 hover:bg-violet-600 transition duration-200 rounded-full" href="">SIGN UP</a></div>
-            </nav>
+              </div>
             </div>
+          </div>
+        </nav>
+
+        <div className="relative pt-24 lg:pt-44 pb-40 lg:pb-72">
+          <div className="relative z-10 container mx-auto px-4">
+            <div className="flex flex-wrap -mx-4 items-center">
+              <div className="w-full lg:w-1/2 xl:w-3/5 px-4 mb-32 lg:mb-0">
+                <div className="max-w-md mx-auto lg:max-w-none">
+                  <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl xl:text-8xl text-white font-semibold leading-none mb-8">
+                    INTRODUCING CodeWave AI
+                  </h1>
+                  <p className="text-2xl text-gray-400 mb-8">
+                    <span className="block">Welcome to ChatBotX -</span>
+                    <span className="block">Your Intelligent AI Chat Assistant!</span>
+                  </p>
+                  <Link className="group inline-flex h-14 px-7 items-center justify-center text-base font-medium text-black hover:text-white bg-orange-500 hover:bg-orange-600 transition duration-200 rounded-full" to="/try">
+                    <span className="mr-2">TRY IT FOR FREE</span>
+                  </Link>
+                </div>
+              </div>
+              <div className="w-full lg:w-1/2 xl:w-2/5 px-4">
+                <div className="xl:inline-block relative">
+                  <img className="absolute top-0 right-0 -mt-8 mr-12 animate-spinStar" src="casper-assets/headers/blink-sm.png" alt="" />
+                  <img className="absolute bottom-0 left-0 lg:-ml-24 xl:-ml-40 animate-spinStar" src="casper-assets/headers/blink-md.png" alt="" />
+                  <img className="block px-10 md:px-0 mx-auto lg:mr-0" src="../images/robot.png" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Mobile Nav */}
+        {mobileNavOpen && (
+          <div className="fixed top-0 left-0 bottom-0 w-5/6 max-w-md z-50">
+            <div onClick={() => setMobileNavOpen(!mobileNavOpen)} className="fixed inset-0 bg-violet-600 opacity-20"></div>
+            <nav className="relative flex flex-col py-7 px-10 w-full h-full bg-gray-800 overflow-y-auto">
+              <div className="flex mb-auto items-center">
+                <Link className="inline-block mr-auto" to="/">
+                  <img className="h-10" src="casper-assets/logos/casper-logo.svg" alt="" />
+                </Link>
+                <button onClick={() => setMobileNavOpen(!mobileNavOpen)}>
+                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 18L18 6M6 6L18 18" stroke="#F86E00" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"></path>
+                  </svg>
+                </button>
+              </div>
+              <div className="py-12 mb-auto">
+                <ul className="flex-col">
+                  <li className="mb-6">
+                    <Link className="inline-block text-base text-white font-medium uppercase" to="/featured">
+                      FEATURED
+                    </Link>
+                  </li>
+                  <li className="mb-6">
+                    <Link className="inline-block text-base text-white font-medium uppercase" to="/solutions">
+                      SOLUTIONS
+                    </Link>
+                  </li>
+                  <li className="mb-6">
+                    <Link className="inline-block text-base text-white font-medium uppercase" to="/products">
+                      PRODUCTS
+                    </Link>
+                  </li>
+                  <li>
+                    <Link className="inline-block text-base text-white font-medium uppercase" to="/articles">
+                      ARTICLES
+                    </Link>
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <Link className="flex py-2 px-4 mb-4 items-center justify-center text-sm font-medium uppercase text-orange-500 hover:text-orange-900" to="/login">
+                  SIGN IN
+                </Link>
+                <Link className="flex h-11 py-2 px-4 items-center justify-center text-sm font-medium uppercase text-black hover:text-white bg-orange-500 hover:bg-orange-600 transition duration-200 rounded-full" to="/register">
+                  SIGN UP
+                </Link>
+              </div>
+            </nav>
+          </div>
+        )}
     </section>
-        {/*How it Works */}
+    {/*How it Works */}
     <section class="relative py-12 md:py-24 lg:py-32 bg-body overflow-hidden bg-black">
         <div class="relative container mx-auto px-4">
             <div class="absolute top-0 right-0 w-186 h-186 bg-gradient-to-t from-violet-900 to-darkBlue-900 rounded-full filter blur-4xl"></div>
@@ -312,4 +350,4 @@ function Landing(){
   </div>);
 }
 
-export default Landing;
+export default LandingPage;
