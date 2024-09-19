@@ -381,7 +381,33 @@ function LandingPage() {
                     {/* Image on the right */}
                     <div className="right-image">
                     <img
-                        src="/images/nader.png"
+                        src="/images/mustafa.jpg"
+                        alt="Andrew Garfield"
+                        className="w-40 h-40 rounded-xl object-cover"
+                    />
+                    </div>
+                </div>
+                </div>
+
+                {/* Testimonial 4 */}
+                <div className="item w-full max-w-lg bg-white bg-opacity-10 shadow-lg p-6 rounded-lg mx-auto">
+                <i className="fa fa-quote-left text-orange-600 text-3xl mb-4"></i>
+                <p className="text-lg text-white mb-4">
+                    “Etiam id ligula risus. Fusce fringilla nisl nunc, nec rutrum lectus cursus nec. In blandit nibh dolor, at rutrum leo accumsan porta. Nullam pulvinar eros porttitor risus condimentum tempus.”
+                </p>
+
+                {/* Flexbox container for aligning the text and image */}
+                <div className="flex items-center justify-between mt-4">
+                    {/* h4 and span on the left */}
+                    <div className="text-left">
+                    <h4 className="text-xl text-orange-500 font-semibold">Andrew Garfield</h4>
+                    <span className="text-sm text-white">CTO of Mexant</span>
+                    </div>
+
+                    {/* Image on the right */}
+                    <div className="right-image">
+                    <img
+                        src="/images/ziad.jpg"
                         alt="Andrew Garfield"
                         className="w-40 h-40 rounded-xl object-cover"
                     />

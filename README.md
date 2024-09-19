@@ -1,4 +1,4 @@
-# Hundeling Your Notes
+# CodeWave Site
 
 ## Technologies
 
