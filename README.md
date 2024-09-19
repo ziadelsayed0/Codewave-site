@@ -46,9 +46,21 @@ npm run dev
 
 <hr>
 
-#### Home
+#### Landing
 
-<img src="home.png">
+<table>
+  <tr>
+    <td><img src="1.png" width=400 hieght=400/></td>
+    <td><img src="2.png" width=400 hieght=400/></td>
+    <td><img src="3.png" width=400 hieght=400/></td>
+  </tr>
+  <tr>
+    <td><img src="4" width=400 hieght=400/></td>
+    <td><img src="5.png" width=400 hieght=400/></td>
+    <td><img src="frontend/public/images/3.png" width=400 hieght=400/></td>
+  </tr>
+  
+</table>
 
 <hr>
 
