@@ -329,7 +329,7 @@ function LandingPage() {
                     {/* Image on the right */}
                     <div className="right-image">
                     <img
-                        src="/images/laptop2.jpg"
+                        src="/images/nader.png"
                         alt="Andrew Garfield"
                         className="w-40 h-40 rounded-xl object-cover"
                     />
@@ -355,7 +355,7 @@ function LandingPage() {
                     {/* Image on the right */}
                     <div className="right-image">
                     <img
-                        src="/images/laptop2.jpg"
+                        src="/images/fras.jpg"
                         alt="Andrew Garfield"
                         className="w-40 h-40 rounded-xl object-cover"
                     />
@@ -381,7 +381,7 @@ function LandingPage() {
                     {/* Image on the right */}
                     <div className="right-image">
                     <img
-                        src="/images/laptop2.jpg"
+                        src="/images/nader.png"
                         alt="Andrew Garfield"
                         className="w-40 h-40 rounded-xl object-cover"
                     />
