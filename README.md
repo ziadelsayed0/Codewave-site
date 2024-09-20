@@ -42,7 +42,7 @@ npm run dev
 
 #### Login
 
-<img src="signin.png">
+<img src="sign_in.png">
 
 <hr>
 
@@ -66,4 +66,4 @@ npm run dev
 
 #### Sign Up
 
-<img src="signup.png">
+<img src="sign_up.png">
