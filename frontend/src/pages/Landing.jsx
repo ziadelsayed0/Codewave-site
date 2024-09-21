@@ -4,6 +4,17 @@ import Slider from "react-slick";
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
 
+// NavBar Appearance 
+window.addEventListener('scroll', function() {
+    const navbar = document.getElementById('navbar');
+    if (window.scrollY > 80) {
+      navbar.classList.add('bg-black','text-black');
+      navbar.classList.remove('bg-transparent', 'text-white');
+    } else {
+      navbar.classList.add('bg-transparent', 'text-white');
+      navbar.classList.remove('bg-black', 'text-black');
+    }
+  });
 function LandingPage() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const settings = {
@@ -16,45 +27,135 @@ function LandingPage() {
     autoplay: true,
     autoplaySpeed: 2000,
   };
-
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+  };
+// Custom Arrows
+function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <button
+        className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-gray-200"
+        onClick={onClick}
+      >
+        <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+      </button>
+    );
+  }
+  
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <button
+        className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-white p-2 rounded-full shadow-md hover:bg-gray-200"
+        onClick={onClick}
+      >
+        <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+      </button>
+    );
+  }
   return (
-    <div class="bg-black">
-        <header class="header-area sticky top-0 z-50 shadow-md">
-        <div class="container mx-auto px-4">
-            <div class="col-12 flex justify-between items-center">
-            <nav className="main-nav flex justify-between w-full">
-                <div className="container mx-auto px-4">
+    <div style={{ backgroundColor: "#0A0119" }} >
+
+        {/* -------- Header Section ---------- */}
+        <header id="navbar" class="header-area sticky top-0 z-50 shadow-md bg-transparent transition duration-300">
+            <div class="container mx-auto px-4">
+                <div class="col-12 flex justify-between items-center">
+                <nav className="main-nav flex justify-between w-full">
+                    <div className="container mx-auto px-4">
                     <div className="relative flex items-center justify-between">
-                    <Link className="inline-block" to="/">
+                        <Link className="inline-block" to="/">
                         <img className="w-48 rounded-full" src="../images/3.png" alt="" />
-                    </Link>
-                    <div className="flex items-center justify-end">
+                        </Link>
+                        <div className="flex items-center justify-end">
                         <div className="hidden lg:block mr-10">
-                        <Link className="inline-flex py-2 px-4 mr-4 items-center justify-center text-sm font-medium uppercase text-white hover:text-orange-500" to="/login">
+                            <Link className="inline-flex py-2 px-4 mr-4 items-center justify-center text-sm font-medium uppercase text-white hover:text-orange-500" to="/login">
                             SIGN IN
-                        </Link>
-                        <Link className="inline-flex h-11 py-2 px-4 items-center justify-center text-sm font-medium uppercase text-black hover:text-white bg-orange-500 hover:bg-orange-600 transition duration-200 rounded-full" to="/register">
+                            </Link>
+                            <Link className="inline-flex h-11 py-2 px-4 items-center justify-center text-sm font-medium uppercase text-black hover:text-white bg-orange-500 hover:bg-orange-600 transition duration-200 rounded-full" to="/register">
                             SIGN UP
-                        </Link>
+                            </Link>
                         </div>
                         <button onClick={() => setMobileNavOpen(!mobileNavOpen)} className="text-white hover:text-orange-500">
-                        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M3 16H29" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
                             <path d="M3 8H29" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
                             <path d="M20 24L29 24" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
-                        </svg>
+                            </svg>
                         </button>
+                        </div>
+                    </div>
+                    </div>
+                </nav>
+                </div>
+            </div>
+        </header>
+
+        {/* --------------------- Slider Section ----------------------*/}
+        <section>
+            <div className="relative overflow-hidden cursor-grab w-full h-[600px] bg-cover bg-center" id="top" style={{ backgroundImage: "url('../images/slider2.jpg')" }}>
+                <Slider {...sliderSettings}>
+                {/* Slide 1 */}
+                <div className="relative w-full h-[600px]">
+                    <div className="absolute inset-0 flex items-center bg-black bg-opacity-50">
+                    <div className="text-left text-white max-w-lg mx-auto p-6">
+                        <h2 className="text-3xl font-bold mb-4 ">Best One in Town<br />&amp; Crypto <em>Services</em></h2>
+                        <p className="text-lg mb-6">When you browse through different tags on TemplateMo website, you can see a variety of CSS templates which are responsive website designs for different individual needs. Please tell your friends about our website. Thank you.</p>
+                        <div className="flex space-x-4">
+                        <a href="#" className="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">Discover More</a>
+                        <a href="#" className="bg-orange-500 text-white py-2 px-4 rounded hover:bg-orange-600">Contact Us</a>
+                        </div>
                     </div>
                     </div>
                 </div>
-                </nav>
-            </div>
-        </div>
-        </header>
-    
-       
 
-        {/* The top section */}
+                {/* Slide 2 */}
+                <div className="relative w-full h-[600px]">
+                    <div className="absolute inset-0 flex items-center bg-black bg-opacity-50">
+                    <div className="text-left text-white max-w-lg mx-auto p-6">
+                        <h2 className="text-3xl font-bold mb-4">Get <em>ready</em> for your business<br />&amp; upgrade <em>all aspects</em></h2>
+                        <p className="text-lg mb-6">Mexant HTML5 Template is provided for free of charge. This layout is based on Boostrap 5 CSS framework. Anyone can download and edit for any professional website. Thank you for visiting TemplateMo website.</p>
+                        <div className="flex space-x-4">
+                        <a href="#" className="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">Discover More</a>
+                        <a href="#" className="bg-orange-500 text-white py-2 px-4 rounded hover:bg-orange-600">Contact Us</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+
+                {/* Slide 3 */}
+                <div className="relative w-full h-[600px]">
+                    <div className="absolute inset-0 flex items-center bg-black bg-opacity-50">
+                    <div className="text-left text-white max-w-lg mx-auto p-6">
+                        <h2 className="text-3xl font-bold mb-4"><em>Digital</em> Currency for you <br />&amp; Best <em>Crypto</em> Tips</h2>
+                        <p className="text-lg mb-6">You will see a bunch of free CSS templates when you search on Google. TemplateMo website is probably the best one because it is 100% free. It does not ask you anything in return. You have a total freedom to use any template for any purpose.</p>
+                        <div className="flex space-x-4">
+                        <a href="#" className="bg-green-500 text-white py-2 px-4 rounded hover:bg-green-600">Discover More</a>
+                        <a href="#" className="bg-orange-500 text-white py-2 px-4 rounded hover:bg-orange-600">Contact Us</a>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+                </Slider>
+            </div>
+        </section>
+
+
+
+        {/* --------------------- The top section ----------------------*/}
         <section className="relative bg-body overflow-hidden">
             <div className="relative pt-24 lg:pt-44 pb-40 lg:pb-72">
             <div className="relative z-10 container mx-auto px-4">
@@ -84,7 +185,7 @@ function LandingPage() {
             </div>
             </div>
 
-            {/* Mobile Nav */}
+            {/* --------------------- Mobile Nav ----------------------*/}
             {mobileNavOpen && (
             <div className="fixed top-0 left-0 bottom-0 w-5/6 max-w-md z-50">
                 <div
@@ -249,7 +350,7 @@ function LandingPage() {
 
             )}
         </section>
-        {/*How it Works */}
+        {/* --------------------- How it Works ----------------------*/}
         <section class="relative py-12 md:py-24 lg:py-32 bg-body overflow-hidden ">
             <div class="relative container mx-auto px-4">
                 <div class="absolute top-0 right-0 w-186 h-186 bg-gradient-to-t from-violet-900 to-darkBlue-900 rounded-full filter blur-4xl"></div>
@@ -306,7 +407,8 @@ function LandingPage() {
                 </div>
             </div>
         </section>
-        {/*The Services section*/}
+
+        {/* --------------------- The Services section ----------------------*/}
         <section class="relative py-12 md:py-24 bg-body overflow-hidden">
             <div class="relative container mx-auto px-4">
                 <div class="absolute bottom-0 right-0 mr-20 w-186 h-186 bg-gradient-to-t from-violet-900 via-darkBlue-900 to-transparent filter blur-4xl"></div>
@@ -342,7 +444,8 @@ function LandingPage() {
                 </div>
             </div>
         </section>
-        {/*Intelligent Conversations*/ }
+        
+        {/* --------------------- Intelligent Conversations----------------------*/}
         <section class="relative py-12 md:py-24 bg-body overflow-hidden">
             <img class="absolute bottom-0 right-0" src="casper-assets/features/double-line-circle.svg" alt=""/>
             <div class="relative container mx-auto px-4">
@@ -417,6 +520,8 @@ function LandingPage() {
             </div>
             </div>
         </section>
+
+        {/* --------------------- Cards for the team ----------------------*/}
         <section className="testimonials py-14" id="testimonials">
         <div className="max-w-screen-lg mx-auto text-center">
             <div className="text-center mb-8">
@@ -533,6 +638,7 @@ function LandingPage() {
         </div>
         </section>
         
+        {/* --------------------- Footer section ----------------------*/}
         <footer class="py-12">
             <div class="container mx-auto px-4">
                 <div class="flex flex-wrap -mx-4">
