@@ -15,6 +15,7 @@ window.addEventListener('scroll', function() {
       navbar.classList.remove('bg-black', 'text-black');
     }
   });
+
 function LandingPage() {
   const [mobileNavOpen, setMobileNavOpen] = useState(false);
   const settings = {
@@ -67,11 +68,19 @@ function SampleNextArrow(props) {
       </button>
     );
   }
+
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  // Toggle function to switch the theme
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+  };
   return (
-    <div style={{ backgroundColor: "#0A0119" }} >
+    <div className={` ${isDarkMode ? 'text-white' : 'text-black'}`}  style={{ backgroundColor: ` ${isDarkMode ? '#0A0119' : 'white'}` }} >
+        {/*  style={{ backgroundColor: ` ${isDarkMode ? '#0A0119' : 'white'}` }}*/}
 
         {/* -------- Header Section ---------- */}
-        <header id="navbar" class="header-area sticky top-0 z-50 shadow-md bg-transparent transition duration-300">
+        <header id="navbar" class="header-area sticky top-0 z-50 shadow-md  bg-transparent transition duration-300" style={{ backgroundColor: ` ${isDarkMode ? '#0A0119' : 'white'}` }}>
             <div class="container mx-auto px-4">
                 <div class="col-12 flex justify-between items-center">
                 <nav className="main-nav flex justify-between w-full">
@@ -82,14 +91,14 @@ function SampleNextArrow(props) {
                         </Link>
                         <div className="flex items-center justify-end">
                         <div className="hidden lg:block mr-10">
-                            <Link className="inline-flex py-2 px-4 mr-4 items-center justify-center text-sm font-medium uppercase text-white hover:text-orange-500" to="/login">
+                            <Link className={`inline-flex py-2 px-4 mr-4 items-center justify-center text-sm font-medium uppercase ${isDarkMode ? 'text-white' : 'text-black'} hover:text-orange-500 `} to="/login">
                             SIGN IN
                             </Link>
-                            <Link className="inline-flex h-11 py-2 px-4 items-center justify-center text-sm font-medium uppercase text-black hover:text-white bg-orange-500 hover:bg-orange-600 transition duration-200 rounded-full" to="/register">
+                            <Link className="inline-flex h-11 py-2 px-4 items-center justify-center text-sm font-medium uppercase black hover:text-white bg-orange-500 hover:bg-orange-600 transition duration-200 rounded-full" to="/register">
                             SIGN UP
                             </Link>
                         </div>
-                        <button onClick={() => setMobileNavOpen(!mobileNavOpen)} className="text-white hover:text-orange-500">
+                        <button onClick={() => setMobileNavOpen(!mobileNavOpen)} className={`${isDarkMode ? 'text-white' : 'text-black'} hover:text-orange-500`}>
                             <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M3 16H29" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
                             <path d="M3 8H29" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
@@ -100,6 +109,65 @@ function SampleNextArrow(props) {
                     </div>
                     </div>
                 </nav>
+                <div class="flex flex-col justify-center ml-3">
+                    <button
+                        type="button"
+                        onClick={toggleTheme}
+                        className={`${
+                        isDarkMode ? 'hidden' : 'inline-flex'
+                        } items-center gap-x-2 py-2 px-3 bg-black/40 rounded-full text-sm text-white hover:bg-black/60 focus:outline-none focus:bg-black/60`}
+                        data-hs-theme-click-value="dark"
+                    >
+                        <svg
+                        className="shrink-0 size-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        >
+                        <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                        </svg>
+                        Dark
+                    </button>
+
+                    <button
+                        type="button"
+                        onClick={toggleTheme}
+                        className={`${
+                        isDarkMode ? 'inline-flex' : 'hidden'
+                        } items-center gap-x-2 py-2 px-3 bg-white/40 rounded-full text-sm text-white hover:bg-white/60 focus:outline-none focus:bg-white/60`}
+                        data-hs-theme-click-value="light"
+                    >
+                        <svg
+                        className="shrink-0 size-4"
+                        xmlns="http://www.w3.org/2000/svg"
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="2"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        >
+                        <circle cx="12" cy="12" r="4"></circle>
+                        <path d="M12 2v2"></path>
+                        <path d="M12 20v2"></path>
+                        <path d="m4.93 4.93 1.41 1.41"></path>
+                        <path d="m17.66 17.66 1.41 1.41"></path>
+                        <path d="M2 12h2"></path>
+                        <path d="M20 12h2"></path>
+                        <path d="m6.34 17.66-1.41 1.41"></path>
+                        <path d="m19.07 4.93-1.41 1.41"></path>
+                        </svg>
+                        Light
+                    </button>
+                </div>
                 </div>
             </div>
         </header>
@@ -156,16 +224,16 @@ function SampleNextArrow(props) {
 
 
         {/* --------------------- The top section ----------------------*/}
-        <section className="relative bg-body overflow-hidden">
+        <section className=" relative bg-body overflow-hidden" style={{ backgroundColor: ` ${isDarkMode ? '#0A0119' : 'white'}` }} >
             <div className="relative pt-24 lg:pt-44 pb-40 lg:pb-72">
             <div className="relative z-10 container mx-auto px-4">
                 <div className="flex flex-wrap -mx-4 items-center">
                 <div className="w-full lg:w-1/2 xl:w-3/5 px-4 mb-32 lg:mb-0">
                     <div className="max-w-md mx-auto lg:max-w-none">
-                    <h1 className="font-heading text-4xl sm:text-6xl md:text-7xl xl:text-8xl text-white font-semibold leading-none mb-8">
+                    <h1 className={`font-heading text-4xl sm:text-6xl md:text-7xl xl:text-8xl ${isDarkMode ? 'text-white' : 'text-black'} font-semibold leading-none mb-8`}>
                         INTRODUCING CodeWave AI
                     </h1>
-                    <p className="text-2xl text-gray-400 mb-8">
+                    <p className={`text-2xl  mb-8 ${isDarkMode ? 'text-gray-400' : 'text-black'} `}>
                         <span className="block">Welcome to ChatBotX -</span>
                         <span className="block">Your Intelligent AI Chat Assistant!</span>
                     </p>
@@ -192,7 +260,7 @@ function SampleNextArrow(props) {
                 onClick={() => setMobileNavOpen(!mobileNavOpen)}
                 className="fixed inset-0 bg-violet-600 opacity-20"
                 ></div>
-                <nav className="relative flex flex-col justify-start py-7 px-10 w-full h-full bg-black overflow-y-auto">
+                <nav className={`relative flex flex-col justify-start py-7 px-10 w-full h-full ${isDarkMode ? 'bg-black' : 'bg-white'} overflow-y-auto`}>
                 <div className="flex items-center">
                     <Link className="inline-block mr-auto" to="/">
                     <img className="h-10" src="casper-assets/logos/casper-logo.svg" alt="" />
@@ -252,7 +320,7 @@ function SampleNextArrow(props) {
                         </svg>
                         
                         <span className="mx-3">
-                        <Link className="inline-block text-base text-white font-medium uppercase" to="/featured">
+                        <Link className="inline-block text-base font-medium uppercase" to="/featured">
                             FEATURED
                         </Link>
                         </span>
@@ -276,7 +344,7 @@ function SampleNextArrow(props) {
                         ></path>
                         </svg>
                         <span className="mx-3">
-                        <Link className="inline-block text-base text-white font-medium uppercase" to="/solutions">
+                        <Link className="inline-block text-base font-medium uppercase" to="/solutions">
                             SOLUTIONS
                         </Link>
                         </span>
@@ -300,7 +368,7 @@ function SampleNextArrow(props) {
                         ></path>
                         </svg>
                         <span className="mx-3">
-                        <Link className="inline-block text-base text-white font-medium uppercase" to="/products">
+                        <Link className="inline-block text-base font-medium uppercase" to="/products">
                             PRODUCTS
                         </Link>
                         </span>
@@ -324,7 +392,7 @@ function SampleNextArrow(props) {
                         ></path>
                         </svg>
                         <span className="mx-3">
-                        <Link className="inline-block text-base text-white font-medium uppercase" to="/articles">
+                        <Link className="inline-block text-base font-medium uppercase" to="/articles">
                             ARTICLES
                         </Link>
                         </span>
@@ -356,7 +424,7 @@ function SampleNextArrow(props) {
                 <div class="absolute top-0 right-0 w-186 h-186 bg-gradient-to-t from-violet-900 to-darkBlue-900 rounded-full filter blur-4xl"></div>
                 <div class="relative max-w-6xl mx-auto">
                 <div class="text-center mb-14">
-                    <h2 class="font-heading text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-medium text-white tracking-tight mb-6">How Does CodeWave Work</h2>
+                    <h2 class="font-heading text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-medium tracking-tight mb-6">How Does CodeWave Work</h2>
                     <p class="text-xl text-gray-400">Mi turpis turpis in justo pellentesque id nibh praesent.</p>
                 </div>
                 <div class="flex flex-wrap items-center -mx-4 mb-16">
@@ -368,18 +436,18 @@ function SampleNextArrow(props) {
                     </div>
                     <div class="w-full md:w-1/2 px-4">
                     <div class="max-w-lg">
-                        <h3 class="font-heading text-4xl lg:text-5xl font-semibold text-white">01. Upload</h3>
+                        <h3 class="font-heading text-4xl lg:text-5xl font-semibold">01. Upload</h3>
                         <div class="my-6 h-1 w-full bg-white bg-opacity-20"></div>
-                        <p class="text-xl text-white tracking-tight">Our user-friendly interface allows for quick setup, and our dedicated support team is ready to assist you every step of the way.</p>
+                        <p class="text-xl tracking-tight">Our user-friendly interface allows for quick setup, and our dedicated support team is ready to assist you every step of the way.</p>
                     </div>
                     </div>
                 </div>
                 <div class="flex flex-wrap items-center -mx-4 mb-16">
                     <div class="w-full md:w-1/2 px-4 order-last md:order-first">
                     <div class="max-w-lg">
-                        <h3 class="font-heading text-4xl lg:text-5xl font-semibold text-white">02. Auto Generation</h3>
+                        <h3 class="font-heading text-4xl lg:text-5xl font-semibold">02. Auto Generation</h3>
                         <div class="my-6 h-1 w-full bg-white bg-opacity-20"></div>
-                        <p class="text-xl text-white tracking-tight">From answering questions to providing recommendations, our AI assistant will engage your visitors effortlessly.</p>
+                        <p class="text-xl tracking-tight">From answering questions to providing recommendations, our AI assistant will engage your visitors effortlessly.</p>
                     </div>
                     </div>
                     <div class="w-full md:w-1/2 px-4 mb-8 md:mb-0">
@@ -398,9 +466,9 @@ function SampleNextArrow(props) {
                     </div>
                     <div class="w-full md:w-1/2 px-4">
                     <div class="max-w-lg">
-                        <h3 class="font-heading text-4xl lg:text-5xl font-semibold text-white">03. Select & Send</h3>
+                        <h3 class="font-heading text-4xl lg:text-5xl font-semibold">03. Select & Send</h3>
                         <div class="my-6 h-1 w-full bg-white bg-opacity-20"></div>
-                        <p class="text-xl text-white tracking-tight">Our user-friendly interface allows for quick setup, and our dedicated support team is ready to assist you every step of the way.</p>
+                        <p class="text-xl tracking-tight">Our user-friendly interface allows for quick setup, and our dedicated support team is ready to assist you every step of the way.</p>
                     </div>
                     </div>
                 </div>
@@ -413,31 +481,31 @@ function SampleNextArrow(props) {
             <div class="relative container mx-auto px-4">
                 <div class="absolute bottom-0 right-0 mr-20 w-186 h-186 bg-gradient-to-t from-violet-900 via-darkBlue-900 to-transparent filter blur-4xl"></div>
                 <div class="max-w-md mx-auto lg:max-w-none relative">
-                <h2 class="font-heading text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-medium text-white tracking-tight mb-6">CodeWave Services</h2>
+                <h2 class="font-heading text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-medium tracking-tight mb-6">CodeWave Services</h2>
                 <p class="text-xl text-gray-500 tracking-tight mb-16">Mi turpis turpis in justo pellentesque id nibh praesent.</p>
                 <div class="flex flex-wrap -mx-4">
                     <div class="w-full lg:w-1/3 px-4 mb-20 lg:mb-0">
                     <div>
                         <img class="block mb-6" src="casper-assets/services/circle-icon1.png" alt=""/>
-                        <h4 class="font-heading text-3xl font-medium text-white">Intelligent Conersations</h4>
+                        <h4 class="font-heading text-3xl font-medium">Intelligent Conersations</h4>
                         <div class="h-1 bg-white bg-opacity-10 my-6 rounded-md bg-gray-900"></div>
-                        <p class="max-w-sm text-xl tracking-tight leading-relaxed text-violet-50">From answering questions to providing recommendations, our AI assistant will engage your visitors effortlessly.</p>
+                        <p class="max-w-sm text-xl tracking-tight leading-relaxed ${isDarkMode ? 'text-violet-50 ' : 'text-black'}">From answering questions to providing recommendations, our AI assistant will engage your visitors effortlessly.</p>
                     </div>
                     </div>
                     <div class="w-full lg:w-1/3 px-4 mb-20 lg:mb-0">
                     <div>
                         <img class="block mb-6" src="casper-assets/services/circle-icon3.png" alt=""/>
-                        <h4 class="font-heading text-3xl font-medium text-white">Intelligent Conersations</h4>
+                        <h4 class="font-heading text-3xl font-medium">Intelligent Conersations</h4>
                         <div class="h-1 bg-white bg-opacity-10 my-6 rounded-md"></div>
-                        <p class="max-w-xs text-xl tracking-tight leading-relaxed text-violet-50">By understanding your visitors' needs, our chat assistant creates a unique experience</p>
+                        <p class="max-w-xs text-xl tracking-tight leading-relaxed ${isDarkMode ? 'text-violet-50 ' : 'text-black'}">By understanding your visitors' needs, our chat assistant creates a unique experience</p>
                     </div>
                     </div>
                     <div class="w-full lg:w-1/3 px-4">
                     <div>
                         <img class="block mb-6" src="casper-assets/services/circle-icon2.png" alt=""/>
-                        <h4 class="font-heading text-3xl font-medium text-white">Intelligent Conersations</h4>
+                        <h4 class="font-heading text-3xl font-medium">Intelligent Conersations</h4>
                         <div class="h-1 bg-white bg-opacity-10 my-6 rounded-md"></div>
-                        <p class="max-w-xs text-xl tracking-tight leading-relaxed text-violet-50">Say goodbye to static web pages and hello to an interactive, conversational platform</p>
+                        <p class="max-w-xs text-xl tracking-tight leading-relaxed ${isDarkMode ? 'text-violet-50 ' : 'text-black'}">Say goodbye to static web pages and hello to an interactive, conversational platform</p>
                     </div>
                     </div>
                 </div>
@@ -453,12 +521,12 @@ function SampleNextArrow(props) {
             <div class="absolute bottom-0 right-0 -mb-20 w-148 h-148 bg-gradient-to-t from-violet-900 to-darkBlue-900 rounded-full filter blur-4xl"></div>
             <div class="relative">
                 <div class="max-w-xl mx-auto mb-16 text-center">
-                <h2 class="font-heading text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-medium text-white tracking-tight mb-6">Intelligent Conversations</h2>
+                <h2 class="font-heading text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-medium tracking-tight mb-6">Intelligent Conversations</h2>
                 <p class="text-xl text-gray-400">Casper is powered by state-of-the-art artificial intelligence and ensuring natural and meaningful interactions</p>
                 </div>
                 <div class="flex flex-wrap -mx-4">
                 <div class="w-full lg:w-1/3 px-4 mb-8 lg:mb-0">
-                    <div class="max-w-md mx-auto h-full p-8 rounded-3xl shadow-box-violet overflow-hidden bg-white bg-opacity-10">
+                    <div class={`max-w-md mx-auto h-full p-8 rounded-3xl shadow-box-violet overflow-hidden ${isDarkMode ? 'bg-white' : 'bg-black'} bg-opacity-10`}>
                     <div class="flex mb-12 items-center">
                         <div class="flex-shrink-0 flex mr-4 items-center justify-center w-16 h-16 rounded-full bg-green-500">
                         <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -468,17 +536,17 @@ function SampleNextArrow(props) {
                         </svg>
                         </div>
                         <div>
-                        <h4 class="text-2xl font-medium text-white leading-tight">
+                        <h4 class="text-2xl font-medium leading-tight">
                             <span class="block">Seamless</span>
                             <span>Integration</span>
                         </h4>
                         </div>
                     </div>
-                    <p class="text-xl text-gray-400">Powered by state-of-the-art artificial intelligence, ensuring natural and meaningful</p>
+                    <p class={`text-xl ${isDarkMode ? 'text-gray-400' : 'text-black'}`}>Powered by state-of-the-art artificial intelligence, ensuring natural and meaningful</p>
                     </div>
                 </div>
                 <div class="w-full lg:w-1/3 px-4 mb-8 lg:mb-0">
-                    <div class="max-w-md mx-auto h-full p-8 rounded-3xl shadow-box-orange overflow-hidden bg-white bg-opacity-10">
+                    <div class={`max-w-md mx-auto h-full p-8 rounded-3xl shadow-box-orange overflow-hidden ${isDarkMode ? 'bg-white' : 'bg-black'} bg-opacity-10`}>
                     <div class="flex mb-12 items-center">
                         <div class="flex-shrink-0 flex mr-4 items-center justify-center w-16 h-16 rounded-full bg-yellow-700">
                         <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -488,17 +556,17 @@ function SampleNextArrow(props) {
                         </svg>
                         </div>
                         <div>
-                        <h4 class="text-2xl font-medium text-white leading-tight">
+                        <h4 class="text-2xl font-medium leading-tight">
                             <span class="block">Intelligent</span>
                             <span>Conversations</span>
                         </h4>
                         </div>
                     </div>
-                    <p class="text-xl text-gray-400">Whether you're a tech guru or a beginner, you'll have your AI chat assistant up</p>
+                    <p class={`text-xl ${isDarkMode ? 'text-gray-400' : 'text-black'}`}>Whether you're a tech guru or a beginner, you'll have your AI chat assistant up</p>
                     </div>
                 </div>
                 <div class="w-full lg:w-1/3 px-4">
-                    <div class="max-w-md mx-auto h-full p-8 rounded-3xl shadow-box-green overflow-hidden bg-white bg-opacity-10">
+                    <div class={`max-w-md mx-auto h-full p-8 rounded-3xl shadow-box-green overflow-hidden ${isDarkMode ? 'bg-white' : 'bg-black'} bg-opacity-10`}>
                     <div class="flex mb-12 items-center">
                         <div class="flex-shrink-0 flex mr-4 items-center justify-center w-16 h-16 rounded-full bg-sky-500">
                         <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -507,13 +575,13 @@ function SampleNextArrow(props) {
                         </svg>
                         </div>
                         <div>
-                        <h4 class="text-2xl font-medium text-white leading-tight">
+                        <h4 class="text-2xl font-medium leading-tight">
                             <span class="block">Analytics and</span>
                             <span>Insights:</span>
                         </h4>
                         </div>
                     </div>
-                    <p class="text-xl text-gray-400">Gain valuable insights into your users' preferences, behavior, and frequently asked questions</p>
+                    <p class={`text-xl ${isDarkMode ? 'text-gray-400' : 'text-black'}`}>Gain valuable insights into your users' preferences, behavior, and frequently asked questions</p>
                     </div>
                 </div>
                 </div>
@@ -525,15 +593,15 @@ function SampleNextArrow(props) {
         <section className="testimonials py-14" id="testimonials">
         <div className="max-w-screen-lg mx-auto text-center">
             <div className="text-center mb-8">
-            <h4 className="text-3xl text-white font-semibold">Our Team</h4>
+            <h4 className="text-3xl font-semibold">Our Team</h4>
             </div>
 
             <div className="relative">
             <Slider {...settings}>
                 {/* Testimonial 1 */}
-                <div className="item w-full max-w-lg bg-white bg-opacity-10 shadow-lg p-6 rounded-lg mx-auto">
+                <div className={`item w-full max-w-lg ${isDarkMode ? 'bg-white' : 'bg-black'} bg-opacity-10 shadow-lg p-6 rounded-lg mx-auto`}>
                 <i className="fa fa-quote-left text-orange-600 text-3xl mb-4"></i>
-                <p className="text-lg text-white mb-4">
+                <p className="text-lg mb-4">
                     “Etiam id ligula risus. Fusce fringilla nisl nunc, nec rutrum lectus cursus nec. In blandit nibh dolor, at rutrum leo accumsan porta. Nullam pulvinar eros porttitor risus condimentum tempus.”
                 </p>
 
@@ -542,7 +610,7 @@ function SampleNextArrow(props) {
                     {/* h4 and span on the left */}
                     <div className="text-left">
                     <h4 className="text-xl text-orange-500 font-semibold">Nader Hani</h4>
-                    <span className="text-sm text-white">Co-Founder of CodeWave</span>
+                    <span className="text-sm">Co-Founder of CodeWave</span>
                     </div>
 
                     {/* Image on the right */}
@@ -557,9 +625,9 @@ function SampleNextArrow(props) {
                 </div>
 
                 {/* Testimonial 2 */}
-                <div className="item w-full max-w-lg bg-white bg-opacity-10 shadow-lg p-6 rounded-lg mx-auto">
+                <div className={`item w-full max-w-lg ${isDarkMode ? 'bg-white' : 'bg-black'}  bg-opacity-10 shadow-lg p-6 rounded-lg mx-auto`}>
                 <i className="fa fa-quote-left text-orange-600 text-3xl mb-4"></i>
-                <p className="text-lg text-white mb-4">
+                <p className="text-lg mb-4">
                     “Etiam id ligula risus. Fusce fringilla nisl nunc, nec rutrum lectus cursus nec. In blandit nibh dolor, at rutrum leo accumsan porta. Nullam pulvinar eros porttitor risus condimentum tempus.”
                 </p>
 
@@ -568,7 +636,7 @@ function SampleNextArrow(props) {
                     {/* h4 and span on the left */}
                     <div className="text-left">
                     <h4 className="text-xl text-orange-500 font-semibold">Fras Mohamed</h4>
-                    <span className="text-sm text-white">Co-Founder of CodeWave</span>
+                    <span className="text-sm">Co-Founder of CodeWave</span>
                     </div>
 
                     {/* Image on the right */}
@@ -583,9 +651,9 @@ function SampleNextArrow(props) {
                 </div>
 
                 {/* Testimonial 3 */}
-                <div className="item w-full max-w-lg bg-white bg-opacity-10 shadow-lg p-6 rounded-lg mx-auto">
+                <div className={`item w-full max-w-lg ${isDarkMode ? 'bg-white' : 'bg-black'} bg-opacity-10 shadow-lg p-6 rounded-lg mx-auto`}>
                 <i className="fa fa-quote-left text-orange-600 text-3xl mb-4"></i>
-                <p className="text-lg text-white mb-4">
+                <p className="text-lg mb-4">
                     “Etiam id ligula risus. Fusce fringilla nisl nunc, nec rutrum lectus cursus nec. In blandit nibh dolor, at rutrum leo accumsan porta. Nullam pulvinar eros porttitor risus condimentum tempus.”
                 </p>
 
@@ -594,7 +662,7 @@ function SampleNextArrow(props) {
                     {/* h4 and span on the left */}
                     <div className="text-left">
                     <h4 className="text-xl text-orange-500 font-semibold">Mustafa Esmail</h4>
-                    <span className="text-sm text-white">Co-Founder of CodeWave</span>
+                    <span className="text-sm">Co-Founder of CodeWave</span>
                     </div>
 
                     {/* Image on the right */}
@@ -609,9 +677,9 @@ function SampleNextArrow(props) {
                 </div>
 
                 {/* Testimonial 4 */}
-                <div className="item w-full max-w-lg bg-white bg-opacity-10 shadow-lg p-6 rounded-lg mx-auto">
+                <div className={`item w-full max-w-lg ${isDarkMode ? 'bg-white' : 'bg-black'}  bg-opacity-10 shadow-lg p-6 rounded-lg mx-auto`}>
                 <i className="fa fa-quote-left text-orange-600 text-3xl mb-4"></i>
-                <p className="text-lg text-white mb-4">
+                <p className="text-lg mb-4">
                     “Etiam id ligula risus. Fusce fringilla nisl nunc, nec rutrum lectus cursus nec. In blandit nibh dolor, at rutrum leo accumsan porta. Nullam pulvinar eros porttitor risus condimentum tempus.”
                 </p>
 
@@ -620,7 +688,7 @@ function SampleNextArrow(props) {
                     {/* h4 and span on the left */}
                     <div className="text-left">
                     <h4 className="text-xl text-orange-500 font-semibold">Ziad Elasyed</h4>
-                    <span className="text-sm text-white">Co-Founder of CodeWave</span>
+                    <span className="text-sm">Co-Founder of CodeWave</span>
                     </div>
 
                     {/* Image on the right */}
@@ -644,37 +712,37 @@ function SampleNextArrow(props) {
                 <div class="flex flex-wrap -mx-4">
 
                 <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
-                    <h4 class="text-white text-xl font-bold mb-4">Codewave</h4>
-                    <p class="text-gray-400 text-sm">
+                    <h4 class="text-xl font-bold mb-4">Codewave</h4>
+                    <p class={`${isDarkMode ? 'text-gray-400' : 'text-black'} text-sm`}>
                     Empowering businesses with cutting-edge software solutions tailored to their needs.
                     </p>
                 </div>
 
             
                 <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
-                    <h4 class="text-white text-xl font-bold mb-4">Quick Links</h4>
+                    <h4 class="text-xl font-bold mb-4">Quick Links</h4>
                     <ul>
-                    <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">Home</a></li>
-                    <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">Services</a></li>
-                    <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">About Us</a></li>
-                    <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">Contact</a></li>
+                    <li class="mb-2"><a href="#" class={`text-gray-400 ${isDarkMode ?'hover:text-white' :'hover:text-black'}`}>Home</a></li>
+                    <li class="mb-2"><a href="#" class={`text-gray-400 ${isDarkMode ?'hover:text-white' :'hover:text-black'}`}>Services</a></li>
+                    <li class="mb-2"><a href="#" class={`text-gray-400 ${isDarkMode ?'hover:text-white' :'hover:text-black'}`}>About Us</a></li>
+                    <li class="mb-2"><a href="#" class={`text-gray-400 ${isDarkMode ?'hover:text-white' :'hover:text-black'}`}>Contact</a></li>
                     </ul>
                 </div>
 
 
                 <div class="w-full md:w-1/4 px-4 mb-8 md:mb-0">
-                    <h4 class="text-white text-xl font-bold mb-4">Services</h4>
+                    <h4 class=" text-xl font-bold mb-4">Services</h4>
                     <ul>
-                    <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">Web Development</a></li>
-                    <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">Mobile Apps</a></li>
-                    <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">AI Solutions</a></li>
-                    <li class="mb-2"><a href="#" class="text-gray-400 hover:text-white">Cloud Services</a></li>
+                    <li class="mb-2"><a href="#" class={`text-gray-400 ${isDarkMode ? 'hover:text-white' : 'hover:text-black'}`}>Web Development</a></li>
+                    <li class="mb-2"><a href="#" class={`text-gray-400 ${isDarkMode ? 'hover:text-white' : 'hover:text-black'}`}>Mobile Apps</a></li>
+                    <li class="mb-2"><a href="#" class={`text-gray-400 ${isDarkMode ? 'hover:text-white' : 'hover:text-black'}`}>AI Solutions</a></li>
+                    <li class="mb-2"><a href="#" class={`text-gray-400 ${isDarkMode ? 'hover:text-white' : 'hover:text-black'}`}>Cloud Services</a></li>
                     </ul>
                 </div>
 
                 
                 <div class="w-full md:w-1/4 px-4">
-                    <h4 class="text-white text-xl font-bold mb-4">Contact Us</h4>
+                    <h4 class=" text-xl font-bold mb-4">Contact Us</h4>
                     <p class="text-gray-400 mb-2">Email: info@codewave.com</p>
                     <p class="text-gray-400 mb-2">Phone: +1 (123) 456-7890</p>
                     <p class="text-gray-400">Address: 123 Codewave St., Tech City, USA</p>
@@ -683,15 +751,15 @@ function SampleNextArrow(props) {
 
 
                 <div class="mt-8 flex justify-center space-x-6">
-                <a href="#" class="text-gray-400 hover:text-white">
+                <a href="#" class={`text-gray-400 ${isDarkMode ? 'hover:text-white' : 'hover:text-black'}`}>
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="..."/></svg> 
                 </a>
-                <a href="#" class="text-gray-400 hover:text-white">
+                <a href="#" class={`text-gray-400 ${isDarkMode ? 'hover:text-white' : 'hover:text-black'}`}>
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="..."/></svg> 
                 </a>
-                <a href="#" class="text-gray-400 hover:text-white"/>
+                <a href="#" class={`text-gray-400 ${isDarkMode ? 'hover:text-white' : 'hover:text-black'}`}/>
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="..."/></svg>
-                <a href="#" class="text-gray-400 hover:text-white">
+                <a href="#" class={`text-gray-400 ${isDarkMode ? 'hover:text-white' : 'hover:text-black'}`}>
                     <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="..."/></svg> 
                 </a>
                 </div>
