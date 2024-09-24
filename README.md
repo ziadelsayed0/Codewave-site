@@ -75,7 +75,7 @@ npm run dev
 <table>
   <tr>
     <td><img src="/images/1.1.png" width=400 hieght=400/></td>
-    <td><img src="1.2.png" width=400 hieght=400/></td>
+    <td><img src="/images/1.2.png" width=400 hieght=400/></td>
     <td><img src="/images/1.3.png" width=400 hieght=400/></td>
   </tr>
   <tr>
