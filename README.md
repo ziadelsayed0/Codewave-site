@@ -46,7 +46,7 @@ npm run dev
 
 <hr>
 
-#### Landing
+#### Landing (Dark Mode)
 
 <table>
   <tr>
@@ -61,7 +61,27 @@ npm run dev
   </tr>
   <tr>
     <td><img src="8.png" width=400 hieght=400/></td>
+    <td><img src="9.png" width=400 hieght=400/></td>
     <td><img src="frontend/public/images/3.png" width=400 hieght=400/></td>
+  </tr>
+  
+</table>
+
+<hr>
+
+
+#### Landing (Light Mode)
+
+<table>
+  <tr>
+    <td><img src="1.1.png" width=400 hieght=400/></td>
+    <td><img src="1.2.png" width=400 hieght=400/></td>
+    <td><img src="1.3.png" width=400 hieght=400/></td>
+  </tr>
+  <tr>
+    <td><img src="1.4.png" width=400 hieght=400/></td>
+    <td><img src="1.5.png" width=400 hieght=400/></td>
+    <td><img src="1.7.png" width=400 hieght=400/></td>
   </tr>
   
 </table>
