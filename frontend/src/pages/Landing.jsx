@@ -115,8 +115,11 @@ function SampleNextArrow(props) {
                             <Link className="inline-flex py-2 px-4 mr-4 items-center justify-center text-sm font-medium uppercase hover:text-orange-500 " to="/login">
                             SIGN IN
                             </Link>
-                            <Link className="inline-flex h-11 py-2 px-4 items-center justify-center text-sm font-medium uppercase black hover:text-white bg-orange-500 hover:bg-orange-600 transition duration-200 rounded-full" to="/register">
-                            SIGN UP
+                            <Link
+                                className="inline-flex h-11 py-2 px-4 items-center justify-center text-sm font-medium uppercase text-white bg-transparent bg-gradient-to-r from-orange-600  to-orange-300 hover:from-orange-600 hover:to-red-600 transition duration-200 rounded-full"
+                                to="/register"
+                                >
+                                SIGN UP
                             </Link>
                         </div>
                         <button onClick={() => setMobileNavOpen(!mobileNavOpen)} className={`${isDarkMode ? 'text-white' : 'text-black'} hover:text-orange-500`}>
@@ -254,7 +257,7 @@ function SampleNextArrow(props) {
                         {/* Heading with conditional animation */}
                         <h1
                             ref={headingRef}
-                            className={`font-heading text-4xl sm:text-6xl md:text-7xl xl:text-8xl font-semibold leading-none mb-8 transition-transform duration-1000 ${
+                            className={`font-heading text-4xl sm:text-6xl text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-yellow-500 to-red-400 md:text-7xl xl:text-8xl font-semibold leading-none mb-8 transition-transform duration-1000 ${
                             headingInView ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'
                             } ${isDarkMode ? 'text-white' : 'text-black'}`}
                         >
@@ -273,7 +276,7 @@ function SampleNextArrow(props) {
                         </p>
 
                         <Link
-                            className="group inline-flex h-14 px-7 items-center justify-center text-base font-medium text-black hover:text-white bg-orange-500 hover:bg-orange-600 transition duration-200 rounded-full"
+                            className="group inline-flex h-14 px-7 items-center justify-center text-base font-medium hover:text-white bg-transparent bg-gradient-to-r from-red-600  to-orange-300 hover:from-orange-600 hover:to-red-600 transition duration-200 rounded-full"
                             to="/try"
                         >
                             <span className="mr-2">TRY IT FOR FREE</span>
@@ -481,7 +484,7 @@ function SampleNextArrow(props) {
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1 }}
                 >
-                    <h2 className="font-heading text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-medium tracking-tight mb-6">
+                    <h2 className="font-heading text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-yellow-500 to-red-400 text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-medium tracking-tight mb-6">
                     How Does CodeWave Work
                     </h2>
                     <p className="text-xl text-gray-400">Mi turpis turpis in justo pellentesque id nibh praesent.</p>
@@ -574,9 +577,8 @@ function SampleNextArrow(props) {
         {/* --------------------- The Services section ----------------------*/}
         <section className="relative py-12 md:py-24 bg-body overflow-hidden">
             <div className="relative container mx-auto px-4">
-                <div className="absolute bottom-0 right-0 mr-20 w-186 h-186 bg-gradient-to-t from-violet-900 via-darkBlue-900 to-transparent filter blur-4xl"></div>
                 <div className="max-w-md mx-auto lg:max-w-none relative">
-                <h2 className="font-heading text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-medium tracking-tight mb-6">CodeWave Services</h2>
+                <h2 className="font-heading text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-yellow-500 to-red-400 text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-medium tracking-tight mb-6">CodeWave Services</h2>
                 <p className="text-xl text-gray-500 tracking-tight mb-16">Mi turpis turpis in justo pellentesque id nibh praesent.</p>
                 <div className="flex flex-wrap -mx-4">
                     <div className="w-full lg:w-1/3 px-4 mb-20 lg:mb-0">
@@ -629,15 +631,15 @@ function SampleNextArrow(props) {
         
         {/* --------------------- Intelligent Conversations----------------------*/}
         <section class="relative py-12 md:py-24 bg-body overflow-hidden">
-            <img class="absolute bottom-0 right-0" src="casper-assets/features/double-line-circle.svg" alt=""/>
+            {/* <img class="absolute bottom-0 right-0" src="../images/b.png" alt=""/> */}
             <div class="relative container mx-auto px-4">
-                <div class="absolute bottom-0 left-0 -mb-20 w-160 h-160 bg-gradient-to-t from-purple-700 to-darkBlue-900 rounded-full filter blur-4xl"></div>
-                <div class="absolute bottom-0 right-0 -mb-20 w-148 h-148 bg-gradient-to-t from-violet-900 to-darkBlue-900 rounded-full filter blur-4xl"></div>
-                <div class="relative">
-                    <div class="max-w-xl mx-auto mb-16 text-center">
-                        <h2 class="font-heading text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-medium tracking-tight mb-6">Intelligent Conversations</h2>
-                        <p class="text-xl text-gray-400">Casper is powered by state-of-the-art artificial intelligence and ensuring natural and meaningful interactions</p>
-                    </div>
+                <div class="max-w-md mx-auto lg:max-w-none relative">
+                    <h2 class="font-heading text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-yellow-500 to-red-400 text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-medium tracking-tight mb-6">
+                        Intelligent Conversations
+                    </h2>
+                    <p class="text-xl text-gray-400  mb-6">
+                        Casper is powered by state-of-the-art artificial intelligence, ensuring natural and meaningful interactions.
+                    </p>
                     <div class="flex flex-wrap -mx-4">
                         <div class="w-full lg:w-1/3 px-4 mb-8 lg:mb-0">
                             <div class={`max-w-md mx-auto h-full p-8 rounded-3xl shadow-box-violet overflow-hidden ${isDarkMode ? 'bg-white' : 'bg-black'} bg-opacity-10 transition-transform transform hover:scale-105`}>
