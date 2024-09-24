@@ -108,7 +108,7 @@ function SampleNextArrow(props) {
                     <div className="container mx-auto px-4">
                     <div className="relative flex items-center justify-between">
                         <Link className="inline-block" to="/">
-                        <img className="w-48 rounded-full" src="../images/3.png" alt="" />
+                        <img className="w-48 rounded-full" src={`${isDarkMode ?"../images/3.png" : "../images/Logo.png" }`} alt="" />
                         </Link>
                         <div className="flex items-center justify-end">
                         <div className="hidden lg:block mr-10">
@@ -323,7 +323,7 @@ function SampleNextArrow(props) {
                      {/* Logo Container */}
                     <div className="flex justify-start w-full">
                     <a href="/login" className="flex justify-center">
-                        <img src="/images/3.png" alt="Logo" className="w-32 rounded" />
+                        <img src={`${isDarkMode ?"../images/3.png" : "../images/Logo.png" }`} alt="Logo" className="w-32 rounded" />
                     </a>
                     </div>
 
@@ -825,7 +825,7 @@ function SampleNextArrow(props) {
         </section>
         
         {/* --------------------- Footer section ----------------------*/}
-        <footer class="py-12 bg-gray-800">
+        <footer class="py-12 bg-black">
     <div class="container mx-auto px-4">
         <div class="flex flex-wrap -mx-4">
 
