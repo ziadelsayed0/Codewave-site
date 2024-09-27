@@ -18,26 +18,21 @@ const Cards = () => {
     };
     
  
-    const [isDarkMode, setIsDarkMode] = useState(false);
-  
-    // Toggle function to switch the theme
-    const toggleTheme = () => {
-      setIsDarkMode(!isDarkMode);
-    };
+
 
   return (
 <section className="testimonials py-14" id="testimonials">
 <div className="max-w-screen-lg mx-auto text-center">
     <div className="text-center mb-8">
-    <h4 className="text-3xl font-semibold">Our Team</h4>
+    <h4 className="text-3xl text-textColor font-semibold">Our Team</h4>
     </div>
 
     <div className="relative">
     <Slider {...settings}>
         {/* Testimonial 1 */}
-        <div className={`item w-full max-w-lg ${isDarkMode ? 'bg-white' : 'bg-black'} bg-opacity-10 shadow-lg p-6 rounded-lg mx-auto`}>
+        <div className={`item w-full max-w-lg bg-cardbackground bg-opacity-10 shadow-lg p-6 rounded-lg mx-auto`}>
         <i className="fa fa-quote-left text-orange-600 text-3xl mb-4"></i>
-        <p className="text-lg mb-4">
+        <p className="text-lg text-textColor mb-4">
             “Etiam id ligula risus. Fusce fringilla nisl nunc, nec rutrum lectus cursus nec. In blandit nibh dolor, at rutrum leo accumsan porta. Nullam pulvinar eros porttitor risus condimentum tempus.”
         </p>
 
@@ -46,7 +41,7 @@ const Cards = () => {
             {/* h4 and span on the left */}
             <div className="text-left">
             <h4 className="text-xl text-orange-500 font-semibold">Nader Hani</h4>
-            <span className="text-sm">Co-Founder of CodeWave</span>
+            <span className="text-sm text-textColor ">Co-Founder of CodeWave</span>
             </div>
 
             {/* Image on the right */}
@@ -61,9 +56,9 @@ const Cards = () => {
         </div>
 
         {/* Testimonial 2 */}
-        <div className={`item w-full max-w-lg ${isDarkMode ? 'bg-white' : 'bg-black'}  bg-opacity-10 shadow-lg p-6 rounded-lg mx-auto`}>
+        <div className={`item w-full max-w-lg bg-cardbackground  bg-opacity-10 shadow-lg p-6 rounded-lg mx-auto`}>
         <i className="fa fa-quote-left text-orange-600 text-3xl mb-4"></i>
-        <p className="text-lg mb-4">
+        <p className="text-lg text-textColor  mb-4">
             “Etiam id ligula risus. Fusce fringilla nisl nunc, nec rutrum lectus cursus nec. In blandit nibh dolor, at rutrum leo accumsan porta. Nullam pulvinar eros porttitor risus condimentum tempus.”
         </p>
 
@@ -72,7 +67,7 @@ const Cards = () => {
             {/* h4 and span on the left */}
             <div className="text-left">
             <h4 className="text-xl text-orange-500 font-semibold">Fras Mohamed</h4>
-            <span className="text-sm">Co-Founder of CodeWave</span>
+            <span className="text-sm text-textColor ">Co-Founder of CodeWave</span>
             </div>
 
             {/* Image on the right */}
@@ -87,9 +82,9 @@ const Cards = () => {
         </div>
 
         {/* Testimonial 3 */}
-        <div className={`item w-full max-w-lg ${isDarkMode ? 'bg-white' : 'bg-black'} bg-opacity-10 shadow-lg p-6 rounded-lg mx-auto`}>
+        <div className={`item w-full max-w-lg bg-cardbackground  bg-opacity-10 shadow-lg p-6 rounded-lg mx-auto`}>
         <i className="fa fa-quote-left text-orange-600 text-3xl mb-4"></i>
-        <p className="text-lg mb-4">
+        <p className="text-lg text-textColor mb-4">
             “Etiam id ligula risus. Fusce fringilla nisl nunc, nec rutrum lectus cursus nec. In blandit nibh dolor, at rutrum leo accumsan porta. Nullam pulvinar eros porttitor risus condimentum tempus.”
         </p>
 
@@ -98,7 +93,7 @@ const Cards = () => {
             {/* h4 and span on the left */}
             <div className="text-left">
             <h4 className="text-xl text-orange-500 font-semibold">Mustafa Esmail</h4>
-            <span className="text-sm">Co-Founder of CodeWave</span>
+            <span className="text-sm text-textColor ">Co-Founder of CodeWave</span>
             </div>
 
             {/* Image on the right */}
@@ -113,9 +108,9 @@ const Cards = () => {
         </div>
 
         {/* Testimonial 4 */}
-        <div className={`item w-full max-w-lg ${isDarkMode ? 'bg-white' : 'bg-black'}  bg-opacity-10 shadow-lg p-6 rounded-lg mx-auto`}>
+        <div className={`item w-full max-w-lg bg-cardbackground  bg-opacity-10 shadow-lg p-6 rounded-lg mx-auto`}>
         <i className="fa fa-quote-left text-orange-600 text-3xl mb-4"></i>
-        <p className="text-lg mb-4">
+        <p className="text-lg text-textColor mb-4">
             “Etiam id ligula risus. Fusce fringilla nisl nunc, nec rutrum lectus cursus nec. In blandit nibh dolor, at rutrum leo accumsan porta. Nullam pulvinar eros porttitor risus condimentum tempus.”
         </p>
 
@@ -124,7 +119,7 @@ const Cards = () => {
             {/* h4 and span on the left */}
             <div className="text-left">
             <h4 className="text-xl text-orange-500 font-semibold">Ziad Elasyed</h4>
-            <span className="text-sm">Co-Founder of CodeWave</span>
+            <span className="text-sm text-textColor">Co-Founder of CodeWave</span>
             </div>
 
             {/* Image on the right */}
