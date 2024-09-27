@@ -54,7 +54,7 @@
     --textColor: black;
   }
   .dark{
-    --background: #0A0119;
+    --background: black;
     --textColor: white;
   }
 @media (prefers-color-scheme: light){
