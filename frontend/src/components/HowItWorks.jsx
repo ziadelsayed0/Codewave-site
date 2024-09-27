@@ -36,11 +36,11 @@ const HowItWorks = () => {
            </div>
            <div className="w-full md:w-1/2 px-4">
            <div className="max-w-lg">
-               <h3 className="font-heading text-4xl lg:text-5xl font-semibold relative">01. Upload
+               <h3 className="font-heading text-textColor text-4xl lg:text-5xl font-semibold relative">01. Upload
                <span className="absolute left-0 -bottom-7 w-3/4 h-1 bg-orange-600"></span>
                </h3>
                <div className="my-6 h-1 w-full bg-white bg-opacity-20"></div>
-               <p className="text-xl tracking-tight">
+               <p className="text-xl text-textColor tracking-tight">
                Our user-friendly interface allows for quick setup, and our dedicated support team is ready to assist you every step of the way.
                </p>
            </div>
@@ -57,11 +57,11 @@ const HowItWorks = () => {
        >
            <div className="w-full md:w-1/2 px-4 order-last md:order-first">
            <div className="max-w-lg">
-               <h3 className="font-heading text-4xl lg:text-5xl font-semibold relative">02. Auto Generation
+               <h3 className="font-heading text-textColor text-4xl lg:text-5xl font-semibold relative">02. Auto Generation
                <span className="absolute left-0 -bottom-7 w-3/4 h-1 bg-orange-600"></span>
                </h3>
                <div className="my-6 h-1 w-full bg-white bg-opacity-20"></div>
-               <p className="text-xl tracking-tight">
+               <p className="text-xl text-textColor tracking-tight">
                From answering questions to providing recommendations, our AI assistant will engage your visitors effortlessly.
                </p>
            </div>
@@ -90,11 +90,11 @@ const HowItWorks = () => {
            </div>
            <div className="w-full md:w-1/2 px-4">
            <div className="max-w-lg">
-               <h3 className="font-heading text-4xl lg:text-5xl font-semibold relative">03. Select & Send
+               <h3 className="font-heading text-4xl text-textColor lg:text-5xl font-semibold relative">03. Select & Send
                <span className="absolute left-0 -bottom-7 w-3/4 h-1 bg-orange-600"></span>
                </h3>
                <div className="my-6 h-1 w-full bg-white bg-opacity-20"></div>
-               <p className="text-xl tracking-tight">
+               <p className="text-xl text-textColor tracking-tight">
                Our user-friendly interface allows for quick setup, and our dedicated support team is ready to assist you every step of the way.
                </p>
            </div>

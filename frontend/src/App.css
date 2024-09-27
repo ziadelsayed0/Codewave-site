@@ -51,11 +51,15 @@
 
   .light{
     --background: white;
+    --cardbackground: rgba(197, 197, 197, 0.438);
     --textColor: black;
+    --secondColor:black;
   }
   .dark{
     --background: black;
+    --cardbackground: rgba(197, 197, 197, 0.089);
     --textColor: white;
+    --secondColor:#adadae;
   }
 @media (prefers-color-scheme: light){
   :root{

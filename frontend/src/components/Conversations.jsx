@@ -6,13 +6,6 @@ import 'slick-carousel/slick/slick-theme.css';
 
 const Conversations = () => {
 
-    const [isDarkMode, setIsDarkMode] = useState(false);
-
-    // Toggle function to switch the theme
-    const toggleTheme = () => {
-        setIsDarkMode(!isDarkMode);
-  };
-
   return (
     <section class="relative py-12 md:py-24 bg-body overflow-hidden">
  {/* <img class="absolute bottom-0 right-0" src="../images/b.png" alt=""/> */}
@@ -26,7 +19,7 @@ const Conversations = () => {
          </p>
          <div class="flex flex-wrap -mx-4">
              <div class="w-full lg:w-1/3 px-4 mb-8 lg:mb-0">
-                 <div class={`max-w-md mx-auto h-full p-8 rounded-3xl shadow-box-violet overflow-hidden ${isDarkMode ? 'bg-white' : 'bg-black'} bg-opacity-10 transition-transform transform hover:scale-105`}>
+                 <div class={`max-w-md mx-auto h-full p-8 rounded-3xl shadow-box-violet overflow-hidden bg-cardbackground bg-opacity-10 transition-transform transform hover:scale-105`}>
                      <div class="flex mb-12 items-center">
                          <div class="flex-shrink-0 flex mr-4 items-center justify-center w-16 h-16 rounded-full bg-green-500">
                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -37,17 +30,17 @@ const Conversations = () => {
                          </div>
                          <div>
                                  
-                             <h4 class="text-2xl font-medium leading-tight">
+                             <h4 class="text-2xl text-textColor font-medium leading-tight">
                                  <span class="block">Seamless</span>
                                  <span>Integration</span>
                              </h4>
                          </div>
                      </div>
-                     <p class={`text-xl ${isDarkMode ? 'text-gray-400' : 'text-black'}`}>Powered by state-of-the-art artificial intelligence, ensuring natural and meaningful</p>
+                     <p class="text-xl text-secondColor">Powered by state-of-the-art artificial intelligence, ensuring natural and meaningful</p>
                  </div>
              </div>
              <div class="w-full lg:w-1/3 px-4 mb-8 lg:mb-0">
-                 <div class={`max-w-md mx-auto h-full p-8 rounded-3xl shadow-box-orange overflow-hidden ${isDarkMode ? 'bg-white' : 'bg-black'} bg-opacity-10 transition-transform transform hover:scale-105`}>
+                 <div class={`max-w-md mx-auto h-full p-8 rounded-3xl shadow-box-orange overflow-hidden  bg-cardbackground bg-opacity-10 transition-transform transform hover:scale-105`}>
                      <div class="flex mb-12 items-center">
                          <div class="flex-shrink-0 flex mr-4 items-center justify-center w-16 h-16 rounded-full bg-yellow-700">
                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -57,17 +50,17 @@ const Conversations = () => {
                      </svg>
                          </div>
                          <div>
-                             <h4 class="text-2xl font-medium leading-tight">
+                             <h4 class="text-2xl text-textColor font-medium leading-tight">
                                  <span class="block">Intelligent</span>
                                  <span>Conversations</span>
                              </h4>
                          </div>
                      </div>
-                     <p class={`text-xl ${isDarkMode ? 'text-gray-400' : 'text-black'}`}>Whether you're a tech guru or a beginner, you'll have your AI chat assistant up</p>
+                     <p class="text-xl text-secondColor">Whether you're a tech guru or a beginner, you'll have your AI chat assistant up</p>
                  </div>
              </div>
              <div class="w-full lg:w-1/3 px-4">
-                 <div class={`max-w-md mx-auto h-full p-8 rounded-3xl shadow-box-green overflow-hidden ${isDarkMode ? 'bg-white' : 'bg-black'} bg-opacity-10 transition-transform transform hover:scale-105`}>
+                 <div class={`max-w-md mx-auto h-full p-8 rounded-3xl shadow-box-green overflow-hidden bg-cardbackground bg-opacity-10 transition-transform transform hover:scale-105`}>
                      <div class="flex mb-12 items-center">
                          <div class="flex-shrink-0 flex mr-4 items-center justify-center w-16 h-16 rounded-full bg-sky-500">
                          <svg width="24" height="24" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -76,13 +69,13 @@ const Conversations = () => {
                      </svg>
                          </div>
                          <div>
-                             <h4 class="text-2xl font-medium leading-tight">
+                             <h4 class="text-2xl text-textColor font-medium leading-tight">
                                  <span class="block">Analytics and</span>
                                  <span>Insights:</span>
                              </h4>
                          </div>
                      </div>
-                     <p class={`text-xl ${isDarkMode ? 'text-gray-400' : 'text-black'}`}>Gain valuable insights into your users' preferences, behavior, and frequently asked questions</p>
+                     <p class="text-xl text-secondColor">Gain valuable insights into your users' preferences, behavior, and frequently asked questions</p>
                  </div>
              </div>
          </div>

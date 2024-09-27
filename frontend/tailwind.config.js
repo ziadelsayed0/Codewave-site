@@ -7,6 +7,8 @@ export default {
       colors: {
         background: "var(--background)",
         textColor: "var(--textColor)",
+        secondColor: "var(--secondColor)",
+        cardbackground: "var(--cardbackground)",
         // grape:"",
       },
     },
