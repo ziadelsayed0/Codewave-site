@@ -47,3 +47,20 @@
     animation: fadeInUp 1s ease forwards;
     opacity: 0;
   }
+
+
+  .light{
+    --background: white;
+    --textColor: black;
+  }
+  .dark{
+    --background: #0A0119;
+    --textColor: white;
+  }
+@media (prefers-color-scheme: light){
+  :root{
+    --background: white;
+    --textColor: black;
+  }
+}
+ 
