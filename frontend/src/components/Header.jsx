@@ -1,12 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-
-const getTheme = () => {
-    return localStorage.getItem("theme");
-}
-
-
 const Header = () => {
 
     const [mobileNavOpen, setMobileNavOpen] = useState(false);
@@ -70,7 +64,7 @@ const Header = () => {
                                         {/* Mobile Menu Button */}
                                         <button
                                             onClick={() => setMobileNavOpen(!mobileNavOpen)}
-                                            className={`${isDarkMode ? "text-white" : "text-black"} hover:text-orange-500`}
+                                            className="text-textColor hover:text-orange-500"
                                         >
                                             <svg width="28" height="28" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M3 16H29" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"></path>
