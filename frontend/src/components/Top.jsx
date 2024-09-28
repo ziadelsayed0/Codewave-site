@@ -6,9 +6,6 @@ import { useInView } from 'react-intersection-observer';
 
 
 const Top = () => {
-    const [isDarkMode, setIsDarkMode] = useState(false);
-
-
     const { ref: headingRef, inView: headingInView } = useInView({
         triggerOnce: true, // Animates only once when it comes into view
         threshold: 0.1,    // Trigger when 10% of the element is in view

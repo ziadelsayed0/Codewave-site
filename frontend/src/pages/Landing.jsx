@@ -8,6 +8,7 @@ import Top from '../components/Top';
 import Conversations from '../components/Conversations';
 import HowItWorks from '../components/HowItWorks';
 import Cards from '../components/Cards';
+import Services from '../components/Services'
 
 // NavBar Appearance 
 window.addEventListener('scroll', function() {
@@ -35,6 +36,7 @@ function LandingPage() {
         <Sliderview />
         <Top />
         <HowItWorks />
+        <Services />
         <Conversations />
         <Cards />
         <Footer />

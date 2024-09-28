@@ -2,12 +2,7 @@ import React from 'react';
 
 
 const Services = () => {
-    const [isDarkMode, setIsDarkMode] = useState(false);
 
-    // Toggle function to switch the theme
-    const toggleTheme = () => {
-      setIsDarkMode(!isDarkMode);
-    };
   return (
  <section className="relative py-12 md:py-24 bg-body overflow-hidden">
  <div className="relative container mx-auto px-4">
@@ -18,12 +13,12 @@ const Services = () => {
          <div className="w-full lg:w-1/3 px-4 mb-20 lg:mb-0">
              <div className="transition-transform transform hover:scale-105 duration-300">
              <img className="block mb-6" src="casper-assets/services/circle-icon1.png" alt="" />
-             <h4 className="font-heading text-3xl font-medium relative">
+             <h4 className="font-heading text-3xl text-textColor font-medium relative">
                  Intelligent Conversations
                  <span className="absolute left-0 -bottom-7 w-2/4 h-1 bg-orange-600"></span>
              </h4>
-             <div className="h-1 bg-white bg-opacity-10 my-6 rounded-md bg-gray-900"></div>
-             <p className={`max-w-sm text-xl tracking-tight leading-relaxed ${isDarkMode ? 'text-violet-50' : 'text-black'}`}>
+             <div className="h-1 bg-textColor bg-opacity-10 my-6 rounded-md bg-gray-900"></div>
+             <p className={`max-w-sm text-xl tracking-tight leading-relaxed text-textColor`}>
                  From answering questions to providing recommendations, our AI assistant will engage your visitors effortlessly.
              </p>
              </div>
@@ -32,12 +27,12 @@ const Services = () => {
          <div className="w-full lg:w-1/3 px-4 mb-20 lg:mb-0">
              <div className="transition-transform transform hover:scale-105 duration-300">
              <img className="block mb-6" src="casper-assets/services/circle-icon3.png" alt="" />
-             <h4 className="font-heading text-3xl font-medium relative">
+             <h4 className="font-heading text-3xl text-textColor font-medium relative">
                  Intelligent Conversations
                  <span className="absolute left-0 -bottom-7 w-2/4 h-1 bg-orange-600"></span>
              </h4>
-             <div className="h-1 bg-white bg-opacity-10 my-6 rounded-md"></div>
-             <p className={`max-w-xs text-xl tracking-tight leading-relaxed ${isDarkMode ? 'text-violet-50' : 'text-black'}`}>
+             <div className="h-1 bg-textColor bg-opacity-10 my-6 rounded-md"></div>
+             <p className={`max-w-xs text-xl tracking-tight leading-relaxed text-textColor`}>
                  By understanding your visitors' needs, our chat assistant creates a unique experience.
              </p>
              </div>
@@ -46,12 +41,12 @@ const Services = () => {
          <div className="w-full lg:w-1/3 px-4">
              <div className="transition-transform transform hover:scale-105 duration-300">
              <img className="block mb-6" src="casper-assets/services/circle-icon2.png" alt="" />
-             <h4 className="font-heading text-3xl font-medium relative">
+             <h4 className="font-heading text-3xl text-textColor font-medium relative">
                  Intelligent Conversations
                  <span className="absolute left-0 -bottom-7 w-2/4 h-1 bg-orange-600"></span>
              </h4>
-             <div className="h-1 bg-white bg-opacity-10 my-6 rounded-md"></div>
-             <p className={`max-w-xs text-xl tracking-tight leading-relaxed ${isDarkMode ? 'text-violet-50' : 'text-black'}`}>
+             <div className="h-1 bg-textColor bg-opacity-10 my-6 rounded-md"></div>
+             <p className={`max-w-xs text-xl tracking-tight leading-relaxed text-textColor`}>
                  Say goodbye to static web pages and hello to an interactive, conversational platform.
              </p>
              </div>

@@ -2,41 +2,41 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
-const [mobileNavOpen, setMobileNavOpen] = useState(false);
+    const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
-const [isDarkMode, setIsDarkMode] = useState(() => {
-    const savedThemeBtn = localStorage.getItem("theme_btn");
-    return savedThemeBtn === "true";  // Convert string back to boolean
-});
-
-const ThemeToggle = () => {
     const [isDarkMode, setIsDarkMode] = useState(() => {
-      const savedThemeBtn = localStorage.getItem("theme_btn");
-      return savedThemeBtn === "true"; // Initialize from localStorage
+        const savedThemeBtn = localStorage.getItem("theme_btn");
+        return savedThemeBtn === "true";  // Convert string back to boolean
     });
 
-}  
+    const ThemeToggle = () => {
+        const [isDarkMode, setIsDarkMode] = useState(() => {
+            const savedThemeBtn = localStorage.getItem("theme_btn");
+            return savedThemeBtn === "true"; // Initialize from localStorage
+        });
+
+    }
     useEffect(() => {
-      // Sync isDarkMode with localStorage whenever it changes
-      localStorage.setItem("theme_btn", isDarkMode); // Save theme state in localStorage
-  
-      if (isDarkMode) {
-        document.documentElement.classList.add("dark");
-        localStorage.setItem("theme", "dark");
-      } else {
-        document.documentElement.classList.remove("dark");
-        localStorage.setItem("theme", "light");
-      }
+        // Sync isDarkMode with localStorage whenever it changes
+        localStorage.setItem("theme_btn", isDarkMode); // Save theme state in localStorage
+
+        if (isDarkMode) {
+            document.documentElement.classList.add("dark");
+            localStorage.setItem("theme", "dark");
+        } else {
+            document.documentElement.classList.remove("dark");
+            localStorage.setItem("theme", "light");
+        }
     }, [isDarkMode]);
-  
+
     const toggleTheme = () => {
-      setIsDarkMode(prevMode => !prevMode);  // Toggle the theme state
+        setIsDarkMode(prevMode => !prevMode);  // Toggle the theme state
     };
 
-    
+
     return (
         <div>
-            <header id="navbar" class={`header-area sticky top-0 z-50 shadow-md  bg-transparent transition duration-200 bg-background`}>
+            <header id="navbar" class={`header-area sticky top-0 z-50 shadow-md transition duration-200 bg-background`}>
                 <div class="container mx-auto px-4">
                     <div class="col-12 flex justify-between items-center">
                         <nav className="main-nav flex justify-between w-full">
@@ -50,6 +50,62 @@ const ThemeToggle = () => {
                                             alt=""
                                         />
                                     </Link>
+                                    <div class="hidden sm:block">
+                                        <ul class="flex space-x-8">
+                                            <li class="active">
+                                                <a href="./index.html" class="text-blue-500 hover:text-blue-700">Home</a>
+                                            </li>
+                                            <li>
+                                                <a href="./about.html" class="text-textColor hover:text-blue-700">About</a>
+                                            </li>
+                                            <li>
+                                                <a href="./portfolio.html" class="text-textColor hover:text-blue-700">Portfolio</a>
+                                            </li>
+                                            <li>
+                                                <a href="./services.html" class="text-textColor hover:text-blue-700">Services</a>
+                                            </li>
+                                            <li class="relative group">
+                                                <a href="#" class="text-textColor hover:text-blue-700">Pages</a>
+                                                <ul class="absolute left-0 mt-2 hidden group-hover:block bg-white shadow-md rounded-md">
+                                                    <li>
+                                                        <a href="./about.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">About</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="./portfolio.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Portfolio</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="./blog.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Blog</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="./blog-details.html" class="block px-4 py-2 text-gray-700 hover:bg-gray-200">Blog Details</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="./contact.html" class="text-textColor hover:text-blue-700">Contact</a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div className="text-textColor">|</div>
+                                    <div class="hidden sm:block">
+                                        <div class="flex space-x-4">
+                                            <a href="#" class="text-gray-600 hover:text-blue-600">
+                                                <i class="fab fa-facebook"></i>
+                                            </a>
+                                            <a href="#" class="text-gray-600 hover:text-blue-400">
+                                                <i class="fab fa-twitter"></i>
+                                            </a>
+                                            <a href="#" class="text-gray-600 hover:text-pink-600">
+                                                <i class="fab fa-dribbble"></i>
+                                            </a>
+                                            <a href="#" class="text-gray-600 hover:text-purple-600">
+                                                <i class="fab fa-instagram"></i>
+                                            </a>
+                                            <a href="#" class="text-gray-600 hover:text-red-600">
+                                                <i class="fab fa-youtube"></i>
+                                            </a>
+                                        </div>
+                                    </div>
 
                                     <div className="flex items-center justify-end">
                                         {/* Navigation Links */}
@@ -148,7 +204,7 @@ const ThemeToggle = () => {
                         onClick={() => setMobileNavOpen(!mobileNavOpen)}
                         className="fixed inset-0 bg-gray-600 opacity-20"
                     ></div>
-                    <nav className={`relative flex flex-col justify-start py-7 px-10 w-full h-full bg-background overflow-y-auto`}>
+                    <nav className="relative flex flex-col justify-start py-7 px-10 w-full h-full overflow-y-auto" style={{ background: isDarkMode ? "#0a0119" : "white" }}>
                         <div className="flex items-center">
                             <Link className="inline-block mr-auto" to="/">
                                 <img className="h-10" src="casper-assets/logos/casper-logo.svg" alt="" />
@@ -180,7 +236,7 @@ const ThemeToggle = () => {
                         </div>
 
                         <div className="py-12">
-                            <nav className="mt-10">
+                            <nav className="mt-10 ">
 
                                 <a
                                     className="flex items-center px-6 py-2 mt-4 text-gray-100 bg-gray-700 bg-opacity-25"

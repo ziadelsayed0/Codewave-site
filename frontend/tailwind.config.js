@@ -9,6 +9,7 @@ export default {
         textColor: "var(--textColor)",
         secondColor: "var(--secondColor)",
         cardbackground: "var(--cardbackground)",
+        sideBarBackground:"var(--sideBarBackground)",
         // grape:"",
       },
     },

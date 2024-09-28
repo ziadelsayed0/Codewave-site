@@ -82,7 +82,7 @@ const Sliderview = () => {
   // Function to generate the slides
   function CreateSlides() {
     return slides.map((slide, idx) => (
-      <div key={idx} className="relative w-full h-[600px]">
+      <div key={idx} className="relative w-full h-[700px]">
         <div className="absolute inset-0 flex items-center bg-black bg-opacity-50">
           <div className="text-left text-white  mx-auto lg:p-40 p-10">
             <h2 className="text-xl lg:text-3xl font-bold mb-4" dangerouslySetInnerHTML={{ __html: slide.title }}></h2>
@@ -99,7 +99,7 @@ const Sliderview = () => {
 
   return (
     <section>
-      <div className="relative overflow-hidden cursor-grab w-full h-[600px] bg-cover bg-center" id="top" style={{ backgroundImage: "url('../images/slider2.jpg')" }}>
+      <div className="relative overflow-hidden cursor-grab w-full h-[700px] bg-cover bg-center" id="top" style={{ backgroundImage: "url('../images/slider2.jpg')" }}>
         <Slider {...sliderSettings}>
           {CreateSlides()} {/* Call the function to render slides */}
         </Slider>
