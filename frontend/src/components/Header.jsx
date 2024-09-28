@@ -2,34 +2,38 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
+const [mobileNavOpen, setMobileNavOpen] = useState(false);
 
-    const [mobileNavOpen, setMobileNavOpen] = useState(false);
-    const [isDarkMode, setIsDarkMode] = useState(false);
+const [isDarkMode, setIsDarkMode] = useState(() => {
+    const savedThemeBtn = localStorage.getItem("theme_btn");
+    return savedThemeBtn === "true";  // Convert string back to boolean
+});
 
+const ThemeToggle = () => {
+    const [isDarkMode, setIsDarkMode] = useState(() => {
+      const savedThemeBtn = localStorage.getItem("theme_btn");
+      return savedThemeBtn === "true"; // Initialize from localStorage
+    });
+
+}  
     useEffect(() => {
+      // Sync isDarkMode with localStorage whenever it changes
+      localStorage.setItem("theme_btn", isDarkMode); // Save theme state in localStorage
+  
+      if (isDarkMode) {
+        document.documentElement.classList.add("dark");
+        localStorage.setItem("theme", "dark");
+      } else {
+        document.documentElement.classList.remove("dark");
         localStorage.setItem("theme", "light");
-        const selectedTheme = localStorage.getItem("theme")
-        if (selectedTheme) {
-            document.documentElement.classList.add(selectedTheme)
-        }
-        else {
-
-        }
-    })
-
-    // Toggle function to switch the theme
+      }
+    }, [isDarkMode]);
+  
     const toggleTheme = () => {
-        if (isDarkMode === true) {
-            document.documentElement.classList.remove("dark")
-            document.documentElement.classList.add("light")
-            setIsDarkMode(!isDarkMode);
-        } else {
-            document.documentElement.classList.remove("light")
-            document.documentElement.classList.add("dark")
-            setIsDarkMode(!isDarkMode);
-
-        }
+      setIsDarkMode(prevMode => !prevMode);  // Toggle the theme state
     };
+
+    
     return (
         <div>
             <header id="navbar" class={`header-area sticky top-0 z-50 shadow-md  bg-transparent transition duration-200 bg-background`}>

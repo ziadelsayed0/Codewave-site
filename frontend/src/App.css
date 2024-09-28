@@ -56,7 +56,7 @@
     --secondColor:black;
   }
   .dark{
-    --background: black;
+    --background: #0a0119;
     --cardbackground: rgba(197, 197, 197, 0.089);
     --textColor: white;
     --secondColor:#adadae;

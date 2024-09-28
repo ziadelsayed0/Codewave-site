@@ -14,12 +14,13 @@ function Logout(){
 }
 
 function RegisterAndLogout(){
-  localStorage.clear()
+  // localStorage.clear()
   return <Register/>
 }
 
 function App() {
-
+  localStorage.setItem("theme", "dark");  // Store a string value
+  localStorage.setItem("theme_btn", true);
   return (
     <BrowserRouter>
       <Routes>
