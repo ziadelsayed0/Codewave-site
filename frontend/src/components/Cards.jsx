@@ -10,9 +10,8 @@ const Cards = () => {
         dots: true,
         infinite: true,
         speed: 500,
-        slidesToShow: 1,
+        slidesToShow: 3,
         slidesToScroll: 1,
-        arrows: false,
         autoplay: true,
         autoplaySpeed: 2000,
     };
@@ -22,125 +21,106 @@ const Cards = () => {
 
     return (
         <section>
-            <section className="testimonials py-14" id="testimonials">
-                <div className="max-w-screen-lg mx-auto text-center">
+            <section className="latest py-12">
+                <div className="container mx-auto">
                     <div className="text-center mb-8">
-                        <h4 className="text-3xl text-textColor font-semibold">Our Team</h4>
+                        <h2 className="text-4xl font-semibold text-textColor">Our Team</h2>
                     </div>
 
-                    <div className="relative">
-                        <Slider {...settings}>
-                            {/* Testimonial 1 */}
-                            <div className={`item w-full max-w-lg bg-cardbackground bg-opacity-10 shadow-lg p-6 rounded-lg mx-auto`}>
-                                <i className="fa fa-quote-left text-orange-600 text-3xl mb-4"></i>
+                    <Slider {...settings}>
+                        <div className="px-4">
+                            <div className="bg-cardbackground p-6 shadow-lg rounded-lg">
+                                <i className="fas fa-quote-left text-green-600 text-3xl mb-4"></i>
                                 <p className="text-lg text-textColor mb-4">
                                     “Etiam id ligula risus. Fusce fringilla nisl nunc, nec rutrum lectus cursus nec. In blandit nibh dolor, at rutrum leo accumsan porta. Nullam pulvinar eros porttitor risus condimentum tempus.”
                                 </p>
-
-                                {/* Flexbox container for aligning the text and image */}
                                 <div className="flex items-center justify-between mt-4">
-                                    {/* h4 and span on the left */}
-                                    <div className="text-left">
-                                        <h4 className="text-xl text-orange-500 font-semibold">Nader Hani</h4>
-                                        <span className="text-sm text-textColor ">Co-Founder of CodeWave</span>
-                                    </div>
-
-                                    {/* Image on the right */}
-                                    <div className="right-image">
-                                        <img
-                                            src="/images/nader.png"
-                                            alt="Andrew Garfield"
-                                            className="w-40 h-40 rounded-xl object-cover"
-                                        />
-                                    </div>
-                                </div>
-                            </div>
-
-                            {/* Testimonial 2 */}
-                            <div className={`item w-full max-w-lg bg-cardbackground  bg-opacity-10 shadow-lg p-6 rounded-lg mx-auto`}>
-                                <i className="fa fa-quote-left text-orange-600 text-3xl mb-4"></i>
-                                <p className="text-lg text-textColor  mb-4">
-                                    “Etiam id ligula risus. Fusce fringilla nisl nunc, nec rutrum lectus cursus nec. In blandit nibh dolor, at rutrum leo accumsan porta. Nullam pulvinar eros porttitor risus condimentum tempus.”
-                                </p>
-
-                                {/* Flexbox container for aligning the text and image */}
-                                <div className="flex items-center justify-between mt-4">
-                                    {/* h4 and span on the left */}
                                     <div className="text-left">
                                         <h4 className="text-xl text-orange-500 font-semibold">Fras Mohamed</h4>
                                         <span className="text-sm text-textColor ">Co-Founder of CodeWave</span>
                                     </div>
-
-                                    {/* Image on the right */}
                                     <div className="right-image">
                                         <img
                                             src="/images/fras.jpg"
-                                            alt="Andrew Garfield"
+                                            alt="Fras Mohamed"
                                             className="w-40 h-40 rounded-xl object-cover"
                                         />
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
-                            {/* Testimonial 3 */}
-                            <div className={`item w-full max-w-lg bg-cardbackground  bg-opacity-10 shadow-lg p-6 rounded-lg mx-auto`}>
-                                <i className="fa fa-quote-left text-orange-600 text-3xl mb-4"></i>
+                        {/* Add more slides in a similar format */}
+                        <div className="px-4">
+                            <div className="bg-cardbackground p-6 shadow-lg rounded-lg">
+                                <i className="fas fa-quote-left text-green-600  text-3xl mb-4"></i>
                                 <p className="text-lg text-textColor mb-4">
                                     “Etiam id ligula risus. Fusce fringilla nisl nunc, nec rutrum lectus cursus nec. In blandit nibh dolor, at rutrum leo accumsan porta. Nullam pulvinar eros porttitor risus condimentum tempus.”
                                 </p>
-
-                                {/* Flexbox container for aligning the text and image */}
                                 <div className="flex items-center justify-between mt-4">
-                                    {/* h4 and span on the left */}
+                                    <div className="text-left">
+                                        <h4 className="text-xl text-orange-500 font-semibold">Nader Hani</h4>
+                                        <span className="text-sm text-textColor ">Co-Founder of CodeWave</span>
+                                    </div>
+                                    <div className="right-image">
+                                        <img
+                                            src="/images/nader.png"
+                                            alt="Nader Hani"
+                                            className="w-40 h-40 rounded-xl object-cover"
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Add more slides in a similar format */}
+                        <div className="px-4">
+                            <div className="bg-cardbackground p-6 shadow-lg rounded-lg">
+                                <i className="fas fa-quote-left text-green-600 text-3xl mb-4"></i>
+                                <p className="text-lg text-textColor mb-4">
+                                    “Etiam id ligula risus. Fusce fringilla nisl nunc, nec rutrum lectus cursus nec. In blandit nibh dolor, at rutrum leo accumsan porta. Nullam pulvinar eros porttitor risus condimentum tempus.”
+                                </p>
+                                <div className="flex items-center justify-between mt-4">
                                     <div className="text-left">
                                         <h4 className="text-xl text-orange-500 font-semibold">Mustafa Esmail</h4>
                                         <span className="text-sm text-textColor ">Co-Founder of CodeWave</span>
                                     </div>
-
-                                    {/* Image on the right */}
                                     <div className="right-image">
                                         <img
                                             src="/images/mustafa.jpg"
-                                            alt="Andrew Garfield"
+                                            alt="Mustafa Esmail"
                                             className="w-40 h-40 rounded-xl object-cover"
                                         />
                                     </div>
                                 </div>
                             </div>
+                        </div>
 
-                            {/* Testimonial 4 */}
-                            <div className={`item w-full max-w-lg bg-cardbackground  bg-opacity-10 shadow-lg p-6 rounded-lg mx-auto`}>
-                                <i className="fa fa-quote-left text-orange-600 text-3xl mb-4"></i>
+                        {/* Add more slides in a similar format */}
+                        <div className="px-4">
+                            <div className="bg-cardbackground p-6 shadow-lg rounded-lg">
+                                <i className="fas fa-quote-left text-green-600  text-3xl mb-4"></i>
                                 <p className="text-lg text-textColor mb-4">
                                     “Etiam id ligula risus. Fusce fringilla nisl nunc, nec rutrum lectus cursus nec. In blandit nibh dolor, at rutrum leo accumsan porta. Nullam pulvinar eros porttitor risus condimentum tempus.”
                                 </p>
-
-                                {/* Flexbox container for aligning the text and image */}
                                 <div className="flex items-center justify-between mt-4">
-                                    {/* h4 and span on the left */}
                                     <div className="text-left">
                                         <h4 className="text-xl text-orange-500 font-semibold">Ziad Elasyed</h4>
-                                        <span className="text-sm text-textColor">Co-Founder of CodeWave</span>
+                                        <span className="text-sm text-textColor ">Co-Founder of CodeWave</span>
                                     </div>
-
-                                    {/* Image on the right */}
                                     <div className="right-image">
                                         <img
                                             src="/images/ziad.jpg"
-                                            alt="Andrew Garfield"
+                                            alt="Ziad Elasyed"
                                             className="w-40 h-40 rounded-xl object-cover"
                                         />
                                     </div>
                                 </div>
                             </div>
-                        </Slider>
-                    </div>
+                        </div>
+                    </Slider>
                 </div>
             </section>
-
-
-
-
 
             <section
                 className="callto spad bg-cover bg-center py-16 mb-30"
@@ -165,7 +145,7 @@ const Cards = () => {
                     </div>
                 </div>
             </section>
-        </section>
+        </section >
     );
 };
 

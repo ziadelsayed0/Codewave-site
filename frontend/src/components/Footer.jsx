@@ -71,7 +71,7 @@ const Footer = () => {
                         <p class="text-gray-400 mb-2">Phone: +1 (123) 456-7890</p>
                         <p class="text-gray-400">Address: 123 Codewave St., Tech City, USA</p>
                         <form action="#" className="flex pt-10">
-                            <input type="text" placeholder="Email" className="p-2 rounded-l-lg w-full focus:outline-none" />
+                            <input type="text" placeholder="Email" className="p-2 rounded-l-lg w-full focus:outline-none text-black" />
                             <button type="submit" className="hover:bg-blue-700 bg-blue-500 p-2 rounded-r-lg text-black">
                                 <i className="fas fa-paper-plane"></i>
                             </button>
