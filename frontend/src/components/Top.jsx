@@ -46,7 +46,7 @@ const Top = () => {
                   </p>
 
                   <Link
-                      className="group inline-flex h-14 px-7 items-center justify-center text-base font-medium hover:text-white bg-transparent bg-gradient-to-r from-red-600  to-orange-300 hover:from-orange-600 hover:to-red-600 transition duration-200 rounded-full"
+                      className="group inline-flex h-14 px-7 items-center justify-center text-base font-medium hover:text-white bg-transparent bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-600 hover:to-orange-500 transition duration-200 rounded-full"
                       to="/try"
                   >
                       <span className="mr-2">TRY IT FOR FREE</span>

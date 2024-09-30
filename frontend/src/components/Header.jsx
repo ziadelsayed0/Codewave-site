@@ -86,24 +86,14 @@ const Header = () => {
                                             </li>
                                         </ul>
                                     </div>
-                                    <div className="text-textColor">|</div>
+                                    <div className="hidden text-textColor sm:block">|</div>
                                     <div class="hidden sm:block">
                                         <div class="flex space-x-4">
-                                            <a href="#" class="text-gray-600 hover:text-blue-600">
-                                                <i class="fab fa-facebook"></i>
-                                            </a>
-                                            <a href="#" class="text-gray-600 hover:text-blue-400">
-                                                <i class="fab fa-twitter"></i>
-                                            </a>
-                                            <a href="#" class="text-gray-600 hover:text-pink-600">
-                                                <i class="fab fa-dribbble"></i>
-                                            </a>
-                                            <a href="#" class="text-gray-600 hover:text-purple-600">
-                                                <i class="fab fa-instagram"></i>
-                                            </a>
-                                            <a href="#" class="text-gray-600 hover:text-red-600">
-                                                <i class="fab fa-youtube"></i>
-                                            </a>
+                                            <a href="#" className="text-blue-500 hover:text-blue-400"><i className="fab fa-facebook"></i></a>
+                                            <a href="#" className="hover:text-blue-400 text-blue-200"><i className="fab fa-twitter"></i></a>
+                                            <a href="#" className="text-blue-500 hover:text-blue-400"><i className="fab fa-linkedin"></i></a>
+                                            <a href="#" className="text-pink-300 hover:text-blue-400"><i className="fab fa-instagram"></i></a>
+                                            <a href="#" className="text-red-500 hover:text-blue-400"><i className="fab fa-youtube"></i></a>
                                         </div>
                                     </div>
 
@@ -114,7 +104,7 @@ const Header = () => {
                                                 SIGN IN
                                             </Link>
                                             <Link
-                                                className="inline-flex h-11 py-2 px-4 items-center justify-center text-sm font-medium uppercase text-white bg-transparent bg-gradient-to-r from-orange-600 to-orange-300 hover:from-orange-600 hover:to-red-600 transition duration-200 rounded-full"
+                                                className="inline-flex h-11 py-2 px-4 items-center justify-center text-sm font-medium uppercase text-white bg-transparent bg-gradient-to-r from-orange-600 to-red-600 hover:from-orange-600 hover:to-orange-500 transition duration-200 rounded-full"
                                                 to="/register"
                                             >
                                                 SIGN UP
