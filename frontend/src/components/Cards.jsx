@@ -123,13 +123,13 @@ const Cards = () => {
             </section>
 
             <section
-                className="callto spad bg-cover bg-center py-16 mb-30"
-                style={{ backgroundImage: "url('../images/standard.jpg')" }}
+                className="callto spad bg-cover bg-center py-16 mb-30 opacity-50"
+                style={{ backgroundImage: "url('../images/drone.jpg')" }}
             >
                 <div className="container mx-auto">
                     <div className="row flex">
                         <div className="lg:w-2/3">
-                            <div className="callto__text text-white">
+                            <div className="callto__text text-black">
                                 <h2 className="text-4xl font-bold mb-2 mt-80">
                                     Fresh Ideas, Fresh Moments Giving Wings to your Stories.
                                 </h2>

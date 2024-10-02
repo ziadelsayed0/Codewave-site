@@ -37,7 +37,7 @@ const Footer = () => {
                     </div>
 
                     {/* Quick Links */}
-                    <div className="w-full lg:w-1/6 mb-8 lg:mb-0">
+                    <div className="w-full lg:w-1/6 px-4 mb-8 lg:mb-0">
                         <h5 className="font-bold text-lg mb-4 pb-2 relative">Quick Links
                         <span class="absolute left-0 bottom-0 w-1/4 h-1 bg-orange-600"></span>
                         </h5>
@@ -50,7 +50,7 @@ const Footer = () => {
                     </div>
 
                     {/* Our Work */}
-                    <div className="w-full lg:w-1/6 mb-8 lg:mb-0">
+                    <div className="w-full lg:w-1/6 mb-8 px-4 lg:mb-0">
                         <h5 className="font-bold text-lg mb-4 pb-2 relative">Services
                         <span class="absolute left-0 bottom-0 w-1/4 h-1 bg-orange-600"></span>
                         </h5>
@@ -63,7 +63,7 @@ const Footer = () => {
                     </div>
 
                     {/* Contact Us */}
-                    <div className="w-full lg:w-1/3">
+                    <div className="w-full lg:w-1/3 px-4">
                         <h5 className="font-bold text-lg mb-4 pb-2 relative">Contact Us
                         <span class="absolute left-0 bottom-0 w-1/5 h-1 bg-orange-600"></span>
                         </h5>
