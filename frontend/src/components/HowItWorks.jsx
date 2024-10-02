@@ -18,7 +18,7 @@ const HowItWorks = () => {
                         <h2 className="font-heading text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-yellow-500 to-red-400 text-4xl xs:text-5xl sm:text-6xl md:text-7xl font-medium tracking-tight mb-6">
                             CodeWave Work
                         </h2>
-                        <p className="text-xl text-gray-400">Mi turpis turpis in justo pellentesque id nibh praesent.</p>
+                        <p className="text-xl text-gray-400">.</p>
                     </motion.div>
 
                     {/* First Section */}
@@ -31,8 +31,8 @@ const HowItWorks = () => {
                     >
                         <div className="w-full md:w-1/2 px-4 mb-8 md:mb-0">
                             <div className="relative flex max-w-md pt-12 lg:pt-20 pl-12 lg:pl-20 items-end justify-end rounded-3xl overflow-hidden">
-                                <img className="absolute top-0 left-0 w-full h-full" src="../images/color.png" alt="" />
-                                <img className="relative w-87 h-87 rounded-tl-3xl object-cover" src="../images/technology.jpg" alt="" />
+                                <img className="relative rounded-tl-3xl object-cover" src="../images/code3.jpg" alt="" />
+                                {/* <img className="relative w-87 h-87 rounded-tl-3xl object-cover" src="../images/technology.jpg" alt="" /> */}
                             </div>
                         </div>
                         <div className="w-full md:w-1/2 px-4">
@@ -69,8 +69,8 @@ const HowItWorks = () => {
                         </div>
                         <div className="w-full md:w-1/2 px-4 mb-8 md:mb-0">
                             <div className="relative flex max-w-md pt-12 lg:pt-20 pl-12 lg:pl-20 items-end justify-end rounded-3xl overflow-hidden">
-                                <img className="absolute top-0 left-0 w-full h-full" src="../images/color.png" alt="" />
-                                <img className="relative w-87 h-87 rounded-tl-3xl object-cover" src="../images/laptop3.jpg" alt="" />
+                                <img className="relative rounded-tl-3xl object-cover" src="../images/laptop.jpg" alt="" />   
+                                {/* <img className="relative w-87 h-87 rounded-tl-3xl object-cover" src="../images/laptop3.jpg" alt="" /> */}
                             </div>
                         </div>
                     </motion.div>
@@ -85,8 +85,8 @@ const HowItWorks = () => {
                     >
                         <div className="w-full md:w-1/2 px-4 mb-8 md:mb-0">
                             <div className="relative flex max-w-md pt-12 lg:pt-20 pl-12 lg:pl-20 items-end justify-end rounded-3xl overflow-hidden">
-                                <img className="absolute top-0 left-0 w-full h-full" src="../images/color.png" alt="" />
-                                <img className="relative w-87 h-87 rounded-tl-3xl object-cover" src="../images/laptop2.jpg" alt="" />
+                            <img className="relative rounded-tl-3xl object-cover" src="../images/network.jpg" alt="" /> 
+                                {/* <img className="relative w-87 h-87 rounded-tl-3xl object-cover" src="../images/laptop2.jpg" alt="" /> */}
                             </div>
                         </div>
                         <div className="w-full md:w-1/2 px-4">
