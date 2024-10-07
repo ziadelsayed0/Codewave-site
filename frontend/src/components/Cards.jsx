@@ -13,7 +13,24 @@ const Cards = () => {
         slidesToShow: 3,
         slidesToScroll: 1,
         autoplay: true,
-        autoplaySpeed: 2000,
+        autoplaySpeed: 3000,
+        responsive: [
+            {
+                breakpoint: 768, // Mobile view
+                settings: {
+                    slidesToShow: 1, // Show only 1 slide
+                    slidesToScroll: 1,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 1024, // Tablet view
+                settings: {
+                    slidesToShow: 2, // Show 2 slides
+                    slidesToScroll: 1
+                }
+            }
+        ]
     };
 
 
